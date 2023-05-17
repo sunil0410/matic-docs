@@ -85,3 +85,23 @@ aria2c -c -m 0 -x6 -s6 -i heimdall-$network-incremental-compiled-files.txt --max
 After extraction, be sure to point your heimdall/bor datadir config to the path of your extracted data. 
 This ensures the systemd services can properly register the snapshot data on client start. 
 Symlinks can also be used if needing to keep default client config settings.
+
+**For example:** Say you've mounted your block device at ~/snapshots and downloaded/extracted chaindata to
+'heimdall_extract' and 'bor_extract' respectively. Using the below sample commands you can properly register
+your extracted data on heimdall/bor systemd service start:
+```
+# remove any existing datadirs for heimdall and bor
+rm -rf /var/lib/heimdall/data
+rm -rf /var/lib/bor/chaindata
+
+# rename and setup symlinks to match default client datadir configs
+mv ~/snapshots/heimdall_extract ~/snapshots/data
+mv ~/snapshots/bor_extract ~/snapshots/chaindata
+sudo ln -s ~/snapshots/data /var/lib/heimdall
+sudo ln -s ~/snapshots/chaindata /var/lib/bor
+
+# bring up clients with all snapshot data properly registered
+sudo service heimdalld start
+# wait for heimdall to fully sync then start bor
+sudo service bor start
+```

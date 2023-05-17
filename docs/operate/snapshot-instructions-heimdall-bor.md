@@ -29,8 +29,8 @@ For the latest snapshot, please visit [<ins>Polygon Chains Snapshots</ins>](http
 
 ## Heimdall/Bor Snapshots
 
-First, set up your node with the **prerequisites** from our [PoSV1 node setup guide](https://wiki.polygon.technology/docs/operate/full-node-binaries/). Before you start any services, run the shell script below to download and extract your snapshot data for faster bootstrapping. In our example, we're using an Ubuntu Linux m5d.4xlarge machine with an 8TB Block device attached. User simply needs specify 
-the proper network (mainnet/mumbai) and client type (heimdall/bor) and all the correct chaindata will start transferring to your disk. Note, this script combines download/extract phases so downloaded files that have already been extracted are deleted to minimize disk space requirements. We recommend using a Screen session to prevent any accidental interruption of chaindata download/extract script:
+First, set up your node with the **prerequisites** from our [PoSV1 node setup guide](https://wiki.polygon.technology/docs/operate/full-node-binaries/). Before you start any services, run the shell script below to download and extract your snapshot data for faster bootstrapping. In our example, we're using an Ubuntu Linux m5d.4xlarge machine with an 8TB Block device attached. 
+User simply needs specify the proper network (mainnet/mumbai) and client type (heimdall/bor) and all the correct chaindata will start transferring to your disk. Note, this script combines download/extract phases so downloaded files that have already been extracted are deleted to minimize disk space requirements. We recommend using a Screen session to prevent any accidental interruption of chaindata download/extract script:
 
 ```
 #!/bin/bash

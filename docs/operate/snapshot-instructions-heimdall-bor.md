@@ -112,7 +112,7 @@ of the extracted data when starting the Heimdall or Bor systemd services, you ca
 ```
 # remove any existing datadirs for heimdall and bor
 rm -rf /var/lib/heimdall/data
-rm -rf /var/lib/bor/chaindata
+rm -rf /var/lib/bor/data/bor/chaindata
 
 # rename and setup symlinks to match default client datadir configs
 mv ~/snapshots/heimdall_extract ~/snapshots/data

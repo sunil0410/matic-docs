@@ -1,7 +1,7 @@
 ---
 id: supernets-unstake
-title: How to Unstake
-sidebar_label: How to Unstake on the Rootchain
+title: How to Unstake on the Rootchain
+sidebar_label: How to Unstake
 description: "A guide on the how to unstake validator stake."
 keywords:
   - docs
@@ -13,14 +13,6 @@ keywords:
 ---
 
 In this section, we'll go over how to unstake a validator's staked tokens and withdraw them to an external address.
-
-:::warning Breaking changes
-Supernets are rapidly evolving towards their production-ready state, and, as a result, instructions and concepts in these documents are subject to change.
-
-Test releases include breaking changes and are not backward compatibility. Use the current test releases for testing and familiarization only.
-
-It is highly recommended that reach out to the Supernets team for support.
-:::
 
 ## Unstake
 

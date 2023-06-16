@@ -1,8 +1,8 @@
 ---
 id: supernets-ibft-to-polybft
 title: State Trie Migration and Regenesis to PolyBFT
-sidebar_label: Migrate from Edge PoA to Supernets
-description: "Transition to a New Blockchain with PolyBFT Consensus from a Blockchain using IBFT Consensus with Edge."
+sidebar_label: Migrate from Edge PoA
+description: "Transition to a New Blockchain with PolyBFT Consensus from a Blockchain using IBFT Consensus with Edge PoA."
 keywords:
   - docs
   - Polygon
@@ -13,7 +13,7 @@ keywords:
   - modular
 ---
 
-## Transitioning to a New Blockchain with PolyBFT Consensus from a Blockchain using IBFT Consensus with Edge
+## Transitioning to a New Blockchain with PolyBFT Consensus from a Blockchain using IBFT Consensus with Edge PoA
 
 In this guide, you'll discover how to migrate from an existing IBFT consensus chain on the former Edge client to a new PolyBFT consensus-based chain.
 

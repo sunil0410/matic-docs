@@ -27,25 +27,12 @@ Test releases include breaking changes and are not backward compatibility. Use t
 It is highly recommended that reach out to the Supernets team for support.
 :::
 
-:::caution No more non-bridge mode deployment
-
-The latest v0.9 test release of Supernets no longer makes a distinction between "bridge mode" and "non-bridge mode". The bridge is now included by default and must be used when running Supernets.
-
-The latest release aligns with the original vision of creating "Super networks" that achieves network scalability and sovereignty with an associated rootchain.
-
-If you require a standalone Supernet instance, custom configuration is necessary.
-
-:::
-
-:::caution Not backwards compatible with v0.8
-
-Supernets v0.9 is not backward compatible at this time. You must either start a new blockchain from scratch or wait for future migration scripts to support migration from previous versions.
-
-:::
-
 ## Prerequisites
 
 Before diving into any of the tutorials, make sure your environment meets the necessary prerequisites. They can be found **[<ins>here</ins>](/docs/supernets/operate/system.md)**.
+
+<details>
+<summary>Before starting ↓</summary>
 
 :::caution Don't use the develop branch for deployments
 
@@ -75,6 +62,8 @@ Regardless of how a private key is stored and retrieved, it's important to keep 
 
 :::
 
+</details>
+
 ## What you'll learn
 
 In this tutorial, you will learn how to set up and initialize a Supernet with multiple nodes. You will learn the complete end-to-end genesis workflow of building a Supernet, including:
@@ -90,14 +79,13 @@ By the end of this tutorial, you will have a fully functional Supernet test netw
 
 ## What you'll do
 
-This tutorial will cover the following steps. If you are deploying a local Supernet for the first time, please navigate each section in order. 
+The deployment guides will cover the steps outlined below. If you are deploying a Supernet for the first time, please navigate each section in order. 
 
-1. [Spawn a new Supernet chain](/docs/supernets/operate/deploy/local-supernet.md)
-2. [Configure the new Supernet chain](/docs/supernets/operate/deploy/genesis.md)
-3. [Configure the rootchain](/docs/supernets/operate/deploy/rootchain-config.md)
-4. [Allowlist addresses](/docs/supernets/operate/deploy/access-control/allowlist.md)
-5. [Stake on the rootchain](/docs/supernets/operate/deploy/staking/stake.md)
-6. [Start the new Supernet chain](/docs/supernets/operate/deploy/start-chain.md)
+1. [Spawn a New Childchain](/docs/supernets/operate/deploy/local-supernet.md)
+2. [Configure Your New Childchain](/docs/supernets/operate/deploy/genesis.md)
+3. [Configure the Rootchain](/docs/supernets/operate/deploy/rootchain-config.md)
+4. [Configure the Initial Validator Set](/docs/supernets/operate/deploy/genesis-validators.md)
+5. [Start Your New Supernet](/docs/supernets/operate/deploy/start-chain.md)
 
 <details>
 <summary>Fast-track guide ↓</summary>
@@ -193,3 +181,11 @@ This tutorial will cover the following steps. If you are deploying a local Super
     ```
 
 </details>
+
+## Cloud Deployments
+
+| Platform | Guide |
+| --- | --- |
+| Amazon Web Services | To set up a devnet on AWS, you can refer to the AWS deployment guide available [<ins>here</ins>](https://github.com/maticnetwork/terraform-polygon-supernets). The guide provides comprehensive instructions on how to use Terraform to set up a Virtual Private Cloud (VPC), subnets, security groups, and EC2 instances, followed by instructions on configuring nodes using Ansible. |
+| Microsoft Azure | To set up a devnet on Azure, you can refer to the Azure deployment guide available [<ins>here</ins>](https://github.com/caleteeter/polygon-azure). This repository offers an Azure template that can be deployed through the Azure and Bicep CLI, or directly through the "Deploy to Azure" button. Additionally, the deployment can be viewed via the "Visualize" button available in the repository. |
+| Google Cloud Platform | Coming soon. |

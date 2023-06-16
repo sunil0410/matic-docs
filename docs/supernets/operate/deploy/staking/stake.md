@@ -1,7 +1,7 @@
 ---
 id: supernets-how-to-stake
 title: How to Stake on the Rootchain
-sidebar_label: How to Stake on the Rootchain
+sidebar_label: How to Stake
 description: "Learn how to stake on the rootchain."
 keywords:
   - docs

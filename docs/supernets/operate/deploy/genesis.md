@@ -41,7 +41,7 @@ To create the chain configuration, we use the `polygon-edge genesis` command, wh
 
 Supernets differentiates `chain-id` and `supernet-id` within the genesis file. 
 
-- The `chain-id` is a unique identifier for a Supernet.
+- The `chain-id` is a unique identifier for a childchain.
 - The `supernet-id` is a unique identifier that is automatically populated during the Supernet's registration process with the `StakeManager` contract. There can be multiple Supernets registered within the same `StakeManager` - the `supernet-id` is used to distinguish them.
 
 Users can assign a custom `chain-id` to their Supernet via the genesis command. However, `supernet-id` doesn't function as a flag within this command. Instead, its value is derived from the `rootchain deploy` command during the Supernet's registration process with the `StakeManager` contract.

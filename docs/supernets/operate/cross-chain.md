@@ -1,7 +1,7 @@
 ---
 id: supernets-cross-chain
 title: How To Perform Cross-Chain Asset Transfers
-sidebar_label: Transfers Assets Across Your Supernet
+sidebar_label: Transfer Assets Across Your Supernet
 description: "A guide on the available bridge transactions."
 keywords:
   - docs
@@ -17,14 +17,6 @@ keywords:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
-:::warning Breaking changes
-Supernets are rapidly evolving towards their production-ready state, and, as a result, instructions and concepts in these documents are subject to change.
-
-Test releases include breaking changes and are not backward compatibility. Use the current test releases for testing and familiarization only.
-
-It is highly recommended that reach out to the Supernets team for support.
-:::
 
 ## Prerequisites
 
@@ -62,7 +54,6 @@ values={[
 { label: 'ERC-20', value: '20', },
 { label: 'ERC-721', value: '721', },
 { label: 'ERC-1155', value: '1155', },
-{ label: 'Tips & Troubleshoot (coming soon)', value: 'troubleshoot', },
 ]
 }>
 
@@ -481,25 +472,6 @@ In this example, we're sending an exit transaction on a test Supernet instance:
 ```
 
 </details>
-
-</TabItem>
-
-<!-- ===================================================================================================================== -->
-<!-- ================================================ Troubleshoot ======================================================= -->
-<!-- ===================================================================================================================== -->
-
-<TabItem value="troubleshoot">
-
-:::info Coming soon
-:::
-
-## What's the difference between Withdraw and Exit?
-
-Withdrawal initiates the transfer of tokens or assets from the Supernet to an address on the rootchain. This involves burning the tokens on the Supernet and paying gas and transaction fees. The transfer process may take some time as the transaction needs to be processed and confirmed.
-
-Exit, on the other hand, finalizes the withdrawal process by transferring the bridged tokens from the Supernet to the rootchain. It involves sending a message to the `ExitHelper` contract on the rootchain to request the exit of a particular asset. The `ExitHelper` contract verifies the request and then transfers the asset to the rootchain immediately, without queuing it. However, it is essential that the checkpoint block, containing the given withdrawal, is sent to the rootchain.
-
-Withdrawal can be seen as a direct transfer of assets from the Supernet to the rootchain, while exit is an indirect transfer that uses the `ExitHelper` contract to finalize the withdrawal process. Compared to withdrawal, exit is faster and more efficient as it does not require the same level of on-chain processing and confirmation.
 
 </TabItem>
 </Tabs>

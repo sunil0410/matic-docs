@@ -1,7 +1,7 @@
 ---
 id: supernets-install
 title: Installation
-sidebar_label: Install binaries
+sidebar_label: Install Binaries
 description: "Steps on how to install the Supernet binaries."
 keywords:
   - docs
@@ -15,17 +15,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import DownloadButton from '@site/src/data/DownloadButton';
 
-:::warning Breaking changes
-
-Supernets are rapidly evolving towards a production-ready state, and, as a result, instructions and concepts in these guides are subject to change.
-
-Test releases include breaking changes and are not backward compatibility. Use the current test releases for testing and familiarization only.
-
-It is highly recommended that reach out to the Supernets team for support.
-:::
-
-To install and run Supernets, you have several options. The tabs below provide guides for each installation method. You can choose to use pre-built releases, a Docker image, or build from source.
-
 :::tip
 
 We recommend using the pre-built releases and verifying the provided checksums for security.
@@ -33,8 +22,6 @@ We recommend using the pre-built releases and verifying the provided checksums f
 The Docker image is also a convenient option for containerized deployment. Building from source provides greater flexibility, but requires a [suitable development environment](/docs/supernets/operate/system.md).
 
 :::
-
-If you encounter any issues during the installation process, refer to the troubleshooting guide which will be available soon.
 
 :::info Latest release: 1.0.0-rc1
 
@@ -54,7 +41,6 @@ values={[
 { label: 'Pre-built releases', value: 'pre-built', },
 { label: 'Docker image', value: 'docker', },
 { label: 'Build from source', value: 'source', },
-{ label: 'Troubleshoot', value: 'troubleshoot', },
 ]
 }>
 
@@ -84,8 +70,7 @@ values={[
 
 To access the pre-built releases, visit the [GitHub releases page](https://github.com/0xPolygon/polygon-edge/releases). The client provides cross-compiled AMD64/ARM64 binaries for Darwin and Linux.
 
-<details>
-<summary>[For reference] Extract pre-release package</summary>
+### [For reference] Extract pre-release package
 
 Extract the downloaded package using your file system's extraction tool or the provided commands below, and navigate to the pre-built release in your preferred interface or text editor.
 
@@ -132,8 +117,6 @@ cd <destination_folder>
 </TabItem>
 </Tabs>
 
-</details>
-
 </TabItem>
 
 <!-- ===================================================================================================================== -->
@@ -172,15 +155,5 @@ Use the following commands to clone the Polygon Edge repository and build from s
   cd polygon-edge/
   go build -o polygon-edge .
   ```
-</TabItem>
-
-<!-- ===================================================================================================================== -->
-<!-- ================================================== TROUBLESHOOT ===================================================== -->
-<!-- ===================================================================================================================== -->
-
-<TabItem value="troubleshoot">
-
-Coming soon!
-
 </TabItem>
 </Tabs>

@@ -1,7 +1,7 @@
 ---
 id: supernets-param-reference
-title: Configuration Parameter Reference
-sidebar_label: Configuration Parameter Reference
+title: Genesis Configuration Parameter Reference
+sidebar_label: Genesis Configuration Parameter Reference
 description: "Manpage for configurable parameters."
 keywords:
   - docs

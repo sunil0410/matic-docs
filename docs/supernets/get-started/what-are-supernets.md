@@ -13,35 +13,6 @@ keywords:
   - modular
 ---
 
-## A distributed network design to build scalable application-specific blockchains
-
-:::warning Breaking changes
-Supernets are rapidly evolving towards their production-ready state, and, as a result, instructions and concepts in these documents are subject to change.
-
-Test releases include breaking changes and are not backward compatibility. Use the current test releases for testing and familiarization only.
-
-It is highly recommended that reach out to the Supernets team for support.
-
-<details>
-<summary>The following components are available for testing ↓</summary>
-
-- Local deployments.
-- Cloud deployments.
-- Smart contract and validator allowlisting.
-- Smart contract and validator blocklisting.
-- Minting a native ERC-20 token.
-- Rootchain staking.
-- Transfers of ERC-20, ERC-721, ERC-1155 tokens and arbitrary message passing using the native bridge.
-- Migration support from older versions of the original Edge consensus client that use IBFT consensus to PolyBFT.
-
-Additional components, including on-chain governance and account abstraction, are currently in progress.
-
-If you have any questions or are interested in using Supernets in a production environment, please get in touch with the Supernets team for guidance and support.
-
-</details>
-
-:::
-
 ## Introduction
 
 Supernets are application-specific chains that operate on the Polygons Edge consensus client with [PolyBFT consensus](/docs/supernets/design/consensus/polybft/overview.md). They leverage a [native bridge](/docs/supernets/design/bridge/overview.md) to connect with an associated rootchain, namely, Polygon PoS mainnet, enabling them to inherit its security and capabilities. Additionally, Supernets extend the block space available on the rootchain, providing scalability and interoperability for decentralized applications. With on-chain governance mechanisms, Supernets empower communities to make decisions and upgrade the network in a transparent and compliant manner.

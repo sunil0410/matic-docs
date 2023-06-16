@@ -1,7 +1,7 @@
 ---
 id: supernets-how-to-start
-title: How to Start a Supernet
-sidebar_label: How to Start a Supernet
+title: How to Start Your Supernet
+sidebar_label: How to Start Your Supernet
 description: "Learn how to start your new Supernet after configuring the genesis workflow."
 keywords:
   - docs

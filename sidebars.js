@@ -1110,7 +1110,7 @@ module.exports = {
         "supernets/operate/supernets-ibft-to-polybft",
         {
           type: "category",
-          label: "Deploy a Local Supernet",
+          label: "Deploy a Supernet",
           link: {
             type: "generated-index",
           },
@@ -1119,7 +1119,30 @@ module.exports = {
             "supernets/operate/deploy/supernets-spawn-test-chain",
             "supernets/operate/deploy/supernets-how-to-generate-genesis",
             "supernets/operate/deploy/supernets-how-to-configure-rootchain",
-            "supernets/operate/deploy/access-control/supernets-how-to-allowlist",
+            "supernets/operate/deploy/supernets-genesis-validators",
+            "supernets/operate/deploy/supernets-how-to-start",
+          ],
+        },
+        {
+          type: "category",
+          label: "Operate Your Supernet",
+          link: {
+            type: "generated-index",
+          },
+          collapsed: true,
+          items: [
+            {
+              type: "category",
+              label: "Access Control & Allowlists",
+              link: {
+                type: "generated-index",
+              },
+              collapsed: true,
+              items: [
+                  "supernets/operate/deploy/access-control/supernets-allowlist-genesis",
+                  "supernets/operate/deploy/access-control/supernets-allowlist-add-remove",
+                ],
+            },
             {
               type: "category",
               label: "Staking on the Rootchain",
@@ -1132,11 +1155,9 @@ module.exports = {
                   "supernets/operate/deploy/staking/supernets-unstake",
                 ],
             },
-            "supernets/operate/deploy/supernets-how-to-start",
-          ],
+            "supernets/operate/supernets-cross-chain",
+            ],
         },
-        "supernets/operate/supernets-setup-dev-env",
-        "supernets/operate/supernets-cross-chain",
         ],
     },
     {

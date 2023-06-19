@@ -100,6 +100,7 @@ The following wallets are solutions that Polygon Technology has partnered with:
 | [MyEtherWallet](https://www.myetherwallet.com/)* 	| non-custodial 	| EOA 	| no 	| interface 	| no 	|  	| yes | mobile 	|
 | [Omni](https://omni.app/) 	| non-custodial 	| EOA 	| no 	| interface 	| no 	| yes|  	| mobile, api/sdk 	|
 | [Opera Crypto Browser](https://www.opera.com/crypto/next)* 	| non-custodial 	| EOA 	| no 	| support 	| yes 	|  	|  	| mobile, browser 	|
+| [Paraswap Multichain Wallet](https://apps.apple.com/dz/app/paraswap-multichain-wallet/id1584610690)* 	| non-custodial 	| EOA 	| no 	| support 	| yes 	|  	|  	| Apple iOS 	|
 | [Pillar](https://www.pillar.fi/) 	| non-custodial 	| EOA 	| no 	| interface 	| no 	|  	| yes | mobile 	|
 | [Rainbow](https://rainbow.me/) 	| non-custodial 	| EOA 	| no 	| interface 	| yes 	|  	| no | mobile, api/sdk 	|
 | [SafePal](https://safepal.io/)	| non-custodial 	| EOA 	| no 	| no 	| yes 	| yes |  	| hardware, mobile, api/sdk 	|

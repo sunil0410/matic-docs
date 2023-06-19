@@ -677,6 +677,12 @@ module.exports = {
               "rel": null
             },
             {
+              "href": "https://gateway.fm/",
+              "label": "Gateway",
+              "target": "_blank",
+              "rel": null
+            },
+            {
               "href": "https://getblock.io/en/",
               "label": "Getblock",
               "target": "_blank",

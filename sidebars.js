@@ -98,6 +98,7 @@ module.exports = {
         "operate/full-node-binaries",
         "operate/full-node-docker",
         "operate/full-node",
+        "operate/full-node-gcp",
       ],
     },
     "operate/network-rpc-endpoints",
@@ -522,14 +523,6 @@ module.exports = {
           href: "https://faucet.polygon.technology/",
         },
       ],
-    },
-    {
-      type: "category",
-      label: "Advanced",
-      link: {
-        type: "generated-index",
-      },
-      items: ["integrate/install-gcp"],
     },
   ],
 

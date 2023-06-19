@@ -231,6 +231,23 @@ Follow the steps outlined [<ins>here</ins>](https://github.com/maticnetwork/poly
 
 :::
 
+:::info Using an existing ERC-20 as the native gas token
+
+If you already have an ERC-20 token deployed on the rootchain that you want to use as the gas token, you can specify its address using the `--erc20-token` flag when deploying the rootchain contracts. For example:
+
+```bash
+./polygon-edge rootchain deploy \
+  --genesis ./genesis.json \
+  --json-rpc http://127.0.0.1:8545 \
+  --erc20-token <ERC20_TOKEN_ADDRESS>
+```
+
+Replace `<ERC20_TOKEN_ADDRESS>` with the address of your existing ERC-20 token on the rootchain.
+
+To deposit a desired amount and mint it on the childchain, please refer to the guidelines outlined in the despoit guide [<ins>here</ins>](/docs/supernets/operate/deploy/transfers/deposit.md).
+
+:::
+
   ```bash
   ./polygon-edge rootchain deploy \
     --genesis ./genesis.json \
@@ -440,6 +457,23 @@ failed to deploy rootchain contracts: {"code":-32000,"message":"INTERNAL_ERROR: 
 
 You can create a rootchain wallet and fund the nodes by using `polygon-cli`.
 Follow the steps outlined [<ins>here</ins>](https://github.com/maticnetwork/polygon-cli).
+
+:::
+
+:::info Using an existing ERC-20 as the native gas token
+
+If you already have an ERC-20 token deployed on the rootchain that you want to use as the gas token, you can specify its address using the `--erc20-token` flag when deploying the rootchain contracts. For example:
+
+```bash
+./polygon-edge rootchain deploy \
+  --genesis ./genesis.json \
+  --json-rpc http://127.0.0.1:8545 \
+  --erc20-token <ERC20_TOKEN_ADDRESS>
+```
+
+Replace `<ERC20_TOKEN_ADDRESS>` with the address of your existing ERC-20 token on the rootchain.
+
+To deposit a desired amount and mint it on the childchain, please refer to the guidelines outlined in the despoit guide [<ins>here</ins>](/docs/supernets/operate/deploy/transfers/deposit.md).
 
 :::
 

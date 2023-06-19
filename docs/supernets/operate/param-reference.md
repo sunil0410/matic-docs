@@ -35,16 +35,16 @@ values={[
 
 ## PolyBFT Configuration Parameter Reference
 
-| Parameter | Description                                                      | Default Value | Mandatory | Example | Reconfigurable at Runtime |
-| :-------- | :--------------------------------------------------------------- | :------------ | :-------- | :------ | :----------------------- |
-| `--account`           | The flag indicating whether a new account is created              | TRUE          | NO        |         |                          |
-| `--config string`     | The path to the SecretsManager config file                        | ""            | NO        |         |                          |
-| `--data-dir string`   | The directory for the Polygon Edge data if the local FS is used   | ""            | YES       |         |                          |
-| `--insecure`          | The flag indicating whether the secrets stored locally are encrypted | FALSE        | NO        |         |                          |
-| `--network`           | The flag indicating whether a new Network key is created          | TRUE          | NO        |         |                          |
-| `--num int`           | The number of secrets to be created (only for local FS)           | 1             | NO        |         |                          |
-| `--output`            | The flag indicating whether to output existing secrets             | FALSE        | NO        |         |                          |
-| `--private`           | The flag indicating whether the private key is printed            | FALSE        | NO        |         |                          |
+| Parameter | Description                                                      | Default Value | Mandatory |
+| :-------- | :--------------------------------------------------------------- | :------------ | :-------- |
+| `--account`           | The flag indicating whether a new account is created              | TRUE          | NO        |
+| `--config string`     | The path to the SecretsManager config file                        | ""            | NO        |
+| `--data-dir string`   | The directory for the Polygon Edge data if the local FS is used   | ""            | YES       |
+| `--insecure`          | The flag indicating whether the secrets stored locally are encrypted | FALSE      | NO        |
+| `--network`           | The flag indicating whether a new Network key is created          | TRUE          | NO        |
+| `--num int`           | The number of secrets to be created (only for local FS)           | 1             | NO        |
+| `--output`            | The flag indicating whether to output existing secrets             | FALSE        | NO        |
+| `--private`           | The flag indicating whether the private key is printed            | FALSE         | NO        |
 
 :::info Mutually Exclusive Paramaters
 

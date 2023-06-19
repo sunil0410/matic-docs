@@ -1126,19 +1126,18 @@ module.exports = {
           items: [
             {
               type: "category",
-              label: "Access Control & Allowlists",
+              label: "Access Control",
               link: {
                 type: "generated-index",
               },
               collapsed: true,
               items: [
-                  "supernets/operate/deploy/access-control/supernets-allowlist-genesis",
                   "supernets/operate/deploy/access-control/supernets-allowlist-add-remove",
                 ],
             },
             {
               type: "category",
-              label: "Staking on the Rootchain",
+              label: "Staking",
               link: {
                 type: "generated-index",
               },
@@ -1148,7 +1147,18 @@ module.exports = {
                   "supernets/operate/deploy/staking/supernets-unstake",
                 ],
             },
-            "supernets/operate/supernets-cross-chain",
+            {
+              type: "category",
+              label: "Transfers",
+              link: {
+                type: "generated-index",
+              },
+              collapsed: true,
+              items: [
+                  "supernets/operate/deploy/transfers/supernets-cross-chain-deposit",
+                  "supernets/operate/deploy/transfers/supernets-cross-chain-withdraw",
+                ],
+            },
             ],
         },
         ],

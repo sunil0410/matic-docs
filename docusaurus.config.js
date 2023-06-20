@@ -251,9 +251,7 @@ module.exports = {
       id: 'banner',
       content: `
         <div class="announcement-bar">
-          Infinitely scaling Ethereum with Zero-Knowledge technology. 
-            Polygon zkEVM Mainnet Beta is now Live! 
-            <a href="https://zkevm.polygon.technology/develop" class="announcement-link" style="color: #ffffff;">Start Building</a>
+          Polygon Wiki Search will be undergoing a scheduled maintenance. We apologize for any inconvenience.
         </div>
       `,
       textColor: '#ffffff',

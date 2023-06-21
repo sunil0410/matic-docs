@@ -162,9 +162,9 @@ If the `StakeManager` hasn't been deployed to the rootchain, you need to carry o
 
   ```bash
   ./polygon-edge polybft stake-manager-deploy \
-  --deployer-key <hex_encoded_rootchain_account_private_key> \
+  --private-key <hex_encoded_rootchain_account_private_key> \
   [--genesis ./genesis.json] \
-  [--json-rpc http://127.0.0.1:8545] \
+  [--jsonrpc http://127.0.0.1:8545] \
   [--stake-token 0xaddressOfStakeToken] \
   [--test]
   ```

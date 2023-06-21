@@ -102,6 +102,6 @@ The generated secrets include the following information for each validator node:
 - **BLS Private and Public Keys**: These keys are used in the Byzantine fault-tolerant (BFT) consensus protocol to aggregate and verify signatures efficiently.
 - **P2P Networking Node ID**: This is a unique identifier for each validator node in the network, allowing them to establish and maintain connections with other nodes.
 
-> The secrets output can be retrieved again if needed by running the following command: `./polygon-edge secrets output --data-dir test-chain-X`
+> The secrets output can be retrieved again if needed by running the following command: `./polygon-edge polybft-secrets --data-dir test-chain-X/ --insecure`
 
 <br/>

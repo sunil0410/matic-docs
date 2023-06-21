@@ -23,17 +23,16 @@ The `polygon-edge polybft-secrets` command is used to generate account secrets f
 <details>
 <summary>Flags ↓</summary>
 
-| Flag            | Description                                                                                               | Example           |
-|-----------------|-----------------------------------------------------------------------------------------------------------|-------------------|
-| `--account`     | Indicates whether a new account should be created (default true).                                         |                   |
-| `--chain-id`    | Specifies the ID of the chain (default 100).                                                              | `--chain-id 333`  |
+| Flag            | Description                                                                                               | Example                    |
+|-----------------|-----------------------------------------------------------------------------------------------------------|----------------------------|
+| `--account`     | Indicates whether a new account should be created (default true).                                         |                            |
 | `--config`      | The path to the SecretsManager config file. If omitted, the local file system secrets manager is used.    | `--config /path/to/config` |
-| `--data-dir`    | The directory for the Polygon Edge data if the local file system is used.                                 | `--data-dir test-chain-` |
-| `--insecure`    | Indicates whether the secrets stored on the local storage should be encrypted. Intended for testing purposes only. | `--insecure` |
-| `--network`     | Indicates whether a new Network key should be created (default true).                                     |                   |
-| `--num`         | Indicates how many secrets should be created, only for the local file system (default 1).                 | `--num 4`         |
-| `--output`      | Indicates whether to output existing secrets.                                                             | `--output`        |
-| `--private`     | Indicates whether the private key should be printed.                                                      | `--private`       |
+| `--data-dir`    | The directory for the Polygon Edge data if the local file system is used.                                 | `--data-dir test-chain-`   |
+| `--insecure`    | Indicates whether the secrets stored on the local storage should be encrypted. Intended for testing purposes only. |                   |
+| `--network`     | Indicates whether a new Network key should be created (default true).                                     |                            |
+| `--num`         | Indicates how many secrets should be created, only for the local file system (default 1).                 | `--num 4`                  |
+| `--output`      | Indicates whether to output existing secrets.                                                             | `--output`                 |
+| `--private`     | Indicates whether the private key should be printed.                                                      | `--private`                |
 
 **Global Flags:**
 

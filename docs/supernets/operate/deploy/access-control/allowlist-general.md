@@ -76,20 +76,27 @@ const ethers = require('ethers');
 // Connect to the provider (e.g., local node, Infura, Alchemy, etc.)
 const provider = new ethers.providers.JsonRpcProvider('https://rpc-endpoint.io');
 
-// Contract Deployer ACL
-const contractDeployerAddress = '0xContractDeployerAddress';
-const contractDeployerABI = [{...}]; // Replace with the ABI of the Contract Deployer precompile
-const contractDeployer = new ethers.Contract(contractDeployerAddress, contractDeployerABI, provider);
+const ACLInterface = [{...}]; // Replace with the ABI of the Access List precompile
 
-// Transactions ACL
-const transactionsACLAddress = '0xTransactionsACLAddress';
-const transactionsACLABI = [{...}]; // Replace with the ABI of the Transactions precompile
-const transactionsACL = new ethers.Contract(transactionsACLAddress, transactionsACLABI, provider);
+// Contract Deployer Allow List
+const contractDeployerAlowListAddress = '0xContractDeployerAllowListAddress';
+const contractDeployerAllowList = new ethers.Contract(contractDeployerAddress, ACLInterface, provider);
 
-// Bridge ACL
-const bridgeACLAddress = '0xBridgeACLAddress';
-const bridgeACLABI = [{...}]; // Replace with the ABI of the Bridge precompile
-const bridgeACL = new ethers.Contract(bridgeACLAddress, bridgeACLABI, provider);
+// Transactions Allow List
+const transactionsAllowListAddress = '0xTransactionsAllowListAddress';
+const transactionsAllowList = new ethers.Contract(transactionsAllowListAddress, ACLInterface, provider);
+
+// Transactions Block List
+const transactionsBlockListAddress = '0xTransactionsBlockListAddress';
+const transactionsBlockList = new ethers.Contract(transactionsBlockListAddress, ACLInterface, provider);
+
+// Bridge Allow List
+const bridgeAllowListAddress = '0xBridgeAllowListAddress';
+const bridgeAllowList = new ethers.Contract(bridgeAllowListAddress, ACLInterface, provider);
+
+// Bridge Block List
+const bridgeBlockListAddress = '0xBridgeBlockListAddress';
+const bridgeBlockList = new ethers.Contract(bridgeBlockListAddress, ACLInterface, provider);
 ```
 
 #### Interact with the ContractDeployer ACL
@@ -101,19 +108,19 @@ const addrAlice = '0xAliceAddress'; // Replace with Alice's address
 const addrBob = '0xBobAddress'; // Replace with Bob's address
 
 // Add Alice's address to the contract deployer allowlist
-const allowlistContractDeployerTx1 = contractDeployer.AllowlistContractDeployer(addrAlice, true);
+const allowlistContractDeployerTx1 = contractDeployerAllowList.setEnabled(addrAlice);
 allowlistContractDeployerTx1.wait();
 
 // Remove Alice's address from the contract deployer allowlist
-const allowlistContractDeployerTx2 = contractDeployer.AllowlistContractDeployer(addrAlice, false);
+const allowlistContractDeployerTx2 = contractDeployerAllowList.setNone(addrAlice);
 allowlistContractDeployerTx2.wait();
 
 // Add Bob's address to the contract deployer allowlist
-const allowlistContractDeployerTx3 = contractDeployer.AllowlistContractDeployer(addrBob, true);
+const allowlistContractDeployerTx3 = contractDeployerAllowList.setEnabled(addrBob);
 allowlistContractDeployerTx3.wait();
 
 // Remove Bob's address from the contract deployer allowlist
-const allowlistContractDeployerTx4 = contractDeployer.AllowlistContractDeployer(addrBob, false);
+const allowlistContractDeployerTx4 = contractDeployerAllowList.setNone(addrBob);
 allowlistContractDeployerTx4.wait();
 ```
 
@@ -121,19 +128,19 @@ allowlistContractDeployerTx4.wait();
 
 ```javascript
 // Add Bob's address to the transaction allowlist
-const allowlistTxTx1 = transactionsACL.AllowlistTx(addrBob, true);
+const allowlistTxTx1 = transactionsAllowList.setEnabled(addrBob);
 allowlistTxTx1.wait();
 
 // Remove Bob's address from the transaction allowlist
-const allowlistTxTx2 = transactionsACL.AllowlistTx(addrBob, false);
+const allowlistTxTx2 = transactionsAllowList.setNone(addrBob);
 allowlistTxTx2.wait();
 
 // Add Alice's address to the transaction blocklist
-const blocklistTxTx1 = transactionsACL.BlocklistTx(addrAlice, true);
+const blocklistTxTx1 = transactionsBlockList.setEnabled(addrAlice);
 blocklistTxTx1.wait();
 
 // Remove Alice's address from the transaction blocklist
-const blocklistTxTx2 = transactionsACL.BlocklistTx(addrAlice, false);
+const blocklistTxTx2 = transactionsBlockList.setNone(addrAlice);
 blocklistTxTx2.wait();
 ```
 
@@ -141,18 +148,18 @@ blocklistTxTx2.wait();
 
 ```javascript
 // Add Alice's address to the bridge allowlist
-const allowlistBridgeTx1 = bridgeACL.AllowlistBridge(addrAlice, true);
+const allowlistBridgeTx1 = bridgeAllowList.setEnabled(addrAlice);
 allowlistBridgeTx1.wait();
 
 // Remove Alice's address from the bridge allowlist
-const allowlistBridgeTx2 = bridgeACL.AllowlistBridge(addrAlice, false);
+const allowlistBridgeTx2 = bridgeAllowList.setNone(addrAlice);
 allowlistBridgeTx2.wait();
 
 // Add Alice's address to the bridge blocklist
-const blocklistBridgeTx1 = bridgeACL.BlocklistBridge(addrAlice, true);
+const blocklistBridgeTx1 = bridgeBlockList.setEnabled(addrAlice);
 blocklistBridgeTx1.wait();
 
 // Remove Alice's address from the bridge blocklist
-const blocklistBridgeTx2 = bridgeACL.BlocklistBridge(addrAlice, false);
+const blocklistBridgeTx2 = bridgeBlockList.setNone(addrAlice);
 blocklistBridgeTx2.wait();
 ```

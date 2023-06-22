@@ -75,7 +75,13 @@ cd "$extract_dir"
 aria2c -x6 -s6 "https://snapshot-download.polygon.technology/$client-$network-incremental-compiled-files.txt"
 
 # download all incremental files, includes automatic checksum verification per increment
-aria2c -x6 -s6 -i $client-$network-incremental-compiled-files.txt
+aria2c -x6 -s6 -c --auto-file-renaming=false --max-tries=100 -i $client-$network-incremental-compiled-files.txt
+
+# Don't extract if download failed
+if [ $? -ne 0 ]; then
+    echo "Download failed. Restart the script to resume downloading."
+    exit 1
+fi
 
 # helper method to extract all files and delete already-extracted download data to minimize disk use
 function extract_files() {

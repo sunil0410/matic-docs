@@ -85,9 +85,9 @@ Collected fees for all transactions in a block are transferred to the producer's
 
 ### Transfer receipt logs
 
-Each Plasma compatible ERC20 token on Bor adds a special transfer receipt log. The Matic token is no exception to that.
+The Matic token is no exception to that.
 
-`LogTransfer` is a special log that is added to all plasma compatible ERC20/721 tokens.  Consider it as one 2-inputs-2-outputs UTXO for transfer.  Here, `output1 = input1 - amount` and `output2 = input2 + amount`  This allows plasma fraud-proof contracts to verify a transfer of Matic ERC20 tokens (here, Native token) on the Ethereum chain.
+`LogTransfer` is a special log that is added to all compatible ERC20/721 tokens.  Consider it as one 2-inputs-2-outputs UTXO for transfer.  Here, `output1 = input1 - amount` and `output2 = input2 + amount`  This allows fraud-proof contracts to verify a transfer of Matic ERC20 tokens (here, Native token) on the Ethereum chain.
 
 ```jsx
 /**
@@ -353,7 +353,7 @@ Deployed at: `0x0000000000000000000000000000000000001010`
 
 This is special contract that wraps native coin (like $ETH in Ethereum) and provides an ERC20 token interface. Example: `transfer` on this contract transfers native tokens. `withdraw` method in ERC20 token allows users to move their tokens from Bor to Ethereum chain.
 
-Note: This contract doesn't support `allowance`. This is same for every plasma compatible ERC20 token contract.
+Note: This contract doesn't support `allowance`. This is same for every compatible ERC20 token contract.
 
 ```jsx
 contract MaticChildERC20 is BaseERC20 {

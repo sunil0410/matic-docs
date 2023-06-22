@@ -16,14 +16,6 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 Please check the latest [Matic.js documentation on PoS](../matic-js/get-started.md) to get started.
 
-A bridge is basically a set of contracts that help in moving assets from the root chain to the child chain. There are primarily two bridges to move assets between Ethereum and Polygon. The first one is the Plasma bridge and the second one is called the **PoS Bridge** or **Proof of Stake bridge**. **Plasma bridge** provides an increased security guarantee due to the Plasma exit mechanism.
-
-However, there are certain restrictions on the child token and there is a 7-day withdrawal period associated with all exits/withdraws from Polygon to Ethereum on the Plasma bridge.
-
-This is quite painful for those DApps/users who need some **flexibility** and **faster withdrawals**, and are happy with the level of security provided by the Polygon Proof-of-Stake bridge, secured by a robust set of external validators.
-
-Proof of stake based assets provides PoS security and faster exit with one checkpoint interval.
-
 ## Steps to use the PoS Bridge
 
 Before we enter into this section of the docs, it may help to have a thorough understanding of some terms as you'll interact with them while trying to use the bridge: [Mapping](https://docs.polygon.technology/docs/develop/ethereum-polygon/submit-mapping-request/) and the [State Sync Mechanism](https://docs.polygon.technology/docs/pos/state-sync/state-sync/).

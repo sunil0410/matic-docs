@@ -30,7 +30,6 @@ Please view the third-party content disclaimer [<ins>here</ins>](https://github.
   - [Checkpoint](#checkpoint)
   - [StateSync](#statesync)
   - [StateRegistration](#stateregistration)
-  - [PlasmaExit](#plasmaexit)
   - [PredicateRegistration](#predicateregistration)
   - [TokenMapping](#tokenmapping)
   - [FxTokenMapping](#fxtokenmapping)
@@ -42,7 +41,6 @@ Please view the third-party content disclaimer [<ins>here</ins>](https://github.
   - [Validator](#validator)
   - [StakeUpdate](#stakeupdate)
   - [GlobalDelegatorCounter](#globaldelegatorcounter)
-  - [GlobalPlasmaExitCounter](#globalplasmaexitcounter)
   - [Delegator](#delegator)
   - [Topup](#topup)
   - [StakingNFTTransfer](#stakingnfttransfer)
@@ -92,27 +90,7 @@ Please view the third-party content disclaimer [<ins>here</ins>](https://github.
 | user     | Bytes! | User address          |
 | receiver | Bytes! | Receiver address      |
 | sender   | Bytes! | Sender address        |
-
-## PlasmaExit
-
-| Field                  | Type     | Description                                                          |
-| ---------------------- | -------- | -------------------------------------------------------------------- |
-| id                     | ID!      | Always created using plasma-exit-\${exitId}                          |
-| counter                | BigInt!  | Shows where the exitStarted transaction happened                     |
-| exitId                 | BigInt!  | Exit ID                                                              |
-| exitInitiator          | Bytes!   | Address of plasma exit initiator                                     |
-| exitCompleter          | Bytes!   | Address of plasma exit completed                                     |
-| Token                  | Bytes!   | Token contract address                                               |
-| amount                 | BigInt!  | Liquidity amount to exit                                             |
-| isRegularExit          | Boolean! | Regular exit check                                                   |
-| exited                 | Int!     | exit codes: 0 - exit started, 1 - exit cancelled, 2 - exit completed |
-| exitStartedTxHash      | Bytes!   | Exit started transaction hash                                        |
-| exitStartedTimeStamp   | BigInt!  | Exit started timestamp                                               |
-| exitCancelledTxHash    | BigInt!  | Exit cancelled transaction hash                                      |
-| exitCancelledTimeStamp | BigInt!  | Exit started timestamp                                               |
-| exitCompletedTxHash    | BigInt!  | Exit completed transaction hash                                      |
-| exitCompletedTimeStamp | BigInt!  | Exit started timestamp                                               |
-
+                                            |
 ## PredicateRegistration
 
 | Field            | Type    | Description                                |
@@ -241,13 +219,6 @@ Please view the third-party content disclaimer [<ins>here</ins>](https://github.
 | ------- | ------- | ------------------------------------------------------------------------------ |
 | id      | ID!     | Global delegator counter ID                                                    |
 | current | BigInt! | Keeps track of current delegator counter i.e. delegators are present as of now |
-
-## GlobalPlasmaExitCounter
-
-| Field   | Type    | Description                                                                    |
-| ------- | ------- | ------------------------------------------------------------------------------ |
-| id      | ID!     | Global plasma exit counter                                                     |
-| current | BigInt! | Count of the plasma exits and till where have the process exits been processed |
 
 ## Delegator
 

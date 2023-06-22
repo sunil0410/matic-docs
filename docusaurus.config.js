@@ -186,10 +186,6 @@ module.exports = {
             from: '/docs/develop/wallets/polygon-web-wallet/web-wallet-v2-guide',
           },
           {
-            to: '/docs/faq/general-faq/',
-            from: '/docs/category/faq/'
-          },
-          {
             to: '/docs/maintain/validate/kb/known-issues',
             from: '/docs/maintain/validate/faq/known-issues'
           },

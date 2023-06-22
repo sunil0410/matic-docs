@@ -16,7 +16,7 @@ image: https://wiki.polygon.technology/img/polygon-logo.png
 
 # Heimdall Chain
 
-Heimdall is Polygon Proof-of-Stake Verifier layer, which is responsible for checkpointing a representation of the Plasma blocks to the main chain in our architecture. We have implemented this by building on top of the Tendermint consensus engine with changes to the signature scheme and various data structures.
+Heimdall is Polygon Proof-of-Stake Verifier layer, which is responsible for checkpointing a representation of blocks to the main chain in our architecture. We have implemented this by building on top of the Tendermint consensus engine with changes to the signature scheme and various data structures.
 
 The main chain Stake Manager contract works in conjunction with the Heimdall node to act as the trustless stake management mechanism for the PoS engine, including selecting the validator set, updating validators, etc. Since staking is actually done on the Ethereum smart contract, we do not rely only on validator honesty and instead inherit Ethereum chain security for this key part.
 

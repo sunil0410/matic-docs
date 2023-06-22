@@ -53,14 +53,14 @@ The following technical node operations are **done automatically by the nodes:**
   * Select a subset of validators for the block producer set for each [span](/docs/maintain/glossary.md#span)
   * For each span, select the block producer set again on [Heimdall](/maintain/glossary.md#heimdall) and transmit the selection information to [Bor](/maintain/glossary.md#bor) periodically.
 * Validating blocks on Bor:
-  * For a set of Bor sidechain blocks, each validator independently reads block data for these blocks and validates the data on Heimdall.
+  * For a set of Bor blocks, each validator independently reads block data for these blocks and validates the data on Heimdall.
 * Checkpoint submission:
   * A [proposer](/maintain/glossary.md#proposer) is chosen among the validators for each Heimdall block. The [checkpoint](/maintain/glossary.md#checkpoint-transaction) proposer creates the checkpoint of Bor block data, validates, and broadcasts the signed transaction for other validators to consent to.
   * If more than 2/3 of the active validators reach consensus on the checkpoint, the checkpoint is submitted to the Ethereum mainnet.
 * Sync changes to Polygon staking contracts on Ethereum:
   * Continuing from the checkpoint submission step, since this is an external network call, the checkpoint transaction on Ethereum may or may not be confirmed, or may be pending due to Ethereum congestion issues.
   * In this case, there is an `ack/no-ack` process that is followed to ensure that the next checkpoint contains a snapshot of the previous Bor blocks as well. For example, if checkpoint 1 is for Bor blocks 1-256, and it failed for some reason, the next checkpoint 2 will be for Bor blocks 1-512. See also [Heimdall architecture: Checkpoint](/pos/heimdall/checkpoint.md).
-* State sync from the Ethereum mainnet to the Bor sidechain:
+* State sync from the Ethereum mainnet to Bor:
   * Contract state can be moved between Ethereum and Polygon, specifically through [Bor](/maintain/glossary.md#bor):
   * A DApp contract on Ethereum calls a function on a special Polygon contract on Ethereum.
   * The corresponding event is relayed to Heimdall and then Bor.

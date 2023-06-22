@@ -109,7 +109,7 @@ Install the binaries for both on the sentry and validator machines.
 ### Installing Heimdall
 
 [Heimdall](/docs/pos/heimdall/overview) is the Proof-of-Stake verifier layer
-responsible for checkpointing the representation of the Plasma blocks to the Ethereum mainnet.
+responsible for checkpointing the representation of blocks to the Ethereum mainnet.
 
 The latest version, [Heimdall v.0.3.3](https://github.com/maticnetwork/heimdall/releases/tag/v0.3.3), contains a few enhancements such as:
 1. Restricting data size in state sync txs to:
@@ -167,7 +167,7 @@ Before proceeding, Heimdall should be installed on both the sentry and validator
 
 ### Installing Bor
 
-[Bor](/docs/pos/bor) is the sidechain operator that acts as the block production layer, which syncs with Heimdall to select block producers and verifiers for each [span](/docs/maintain/glossary.md#span) and [sprint](/docs/maintain/glossary.md#sprint).
+[Bor](/docs/pos/bor) is the blockchain operator that acts as the block production layer, which syncs with Heimdall to select block producers and verifiers for each [span](/docs/maintain/glossary.md#span) and [sprint](/docs/maintain/glossary.md#sprint).
 
 Clone the [Bor repository](https://github.com/maticnetwork/bor):
 

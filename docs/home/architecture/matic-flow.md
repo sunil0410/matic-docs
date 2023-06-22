@@ -13,11 +13,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # How Polygon Works
 
-Polygon is a blockchain application platform that provides hybrid Proof-of-Stake and Plasma-enabled sidechains.
-
 Polygon has a three-layer architecture:
 
-1. Staking and Plasma smart contracts on Ethereum
+1. Staking smart contracts on Ethereum
 2. Heimdall (Proof of Stake layer)
 3. Bor (Block producer layer)
 

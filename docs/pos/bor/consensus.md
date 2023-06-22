@@ -7,7 +7,7 @@ keywords:
   - matic
   - Bor Consensus
   - polygon
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
@@ -19,7 +19,7 @@ Bor fetches new producers through span and sprint management mechanism.
 
 ## Validators
 
-Polygon is a Proof-of-stake system. Anyone can stake their Matic token on Ethereum smart-contract, "staking contract", and become a validator for the system. 
+Polygon is a Proof-of-stake system. Anyone can stake their Matic token on Ethereum smart-contract, "staking contract", and become a validator for the system.
 
 ```jsx
 function stake(
@@ -81,7 +81,7 @@ Apart from the current proposer, Bor selects back-up producers.
 
 The producers in Bor also called signers, since to authorize a block for the network, the producer needs to sign the block's hash containing **everything except the signature itself**. This means that the hash contains every field of the header, and also the `extraData` with the exception of the 65-byte signature suffix.
 
-This hash is signed using the standard `secp256k1` curve, and the resulting 65-byte signature is embedded into the `extraData` as the trailing 65-byte suffix. 
+This hash is signed using the standard `secp256k1` curve, and the resulting 65-byte signature is embedded into the `extraData` as the trailing 65-byte suffix.
 
 Each signed block is assigned to a difficulty that puts weight on Block. In-turn signing weighs more (`DIFF_INTURN`) than out of turn one (`DIFF_NOTURN`).
 
@@ -133,11 +133,11 @@ The resolution is simple - choose the chain with higher difficulty. But then the
 - Since D is the producer who is next in line; if and when the situation arises that D is producing the block; the difficulty for the block will be defined just like in wiggle as `len(validatorSet) - (pos(d) - pos(c))` which is `len(validatorSet) - 1`
 - Difficulty for block being produced by A while acting as a backup becomes `len(validatorSet) - (pos(a) + len(validatorSet) - pos(c))` which is `2`
 
-Now having defined the difficulty of each block, the difficulty of a fork is simply the sum of the difficulties of the blocks in that fork. In the case when a fork has to be chosen, the one with higher difficulty is chosen, since that is a reflection of the fact that blocks were produced by in-turn block producers. This is simply to provide some sense of finality to the user on Bor. 
+Now having defined the difficulty of each block, the difficulty of a fork is simply the sum of the difficulties of the blocks in that fork. In the case when a fork has to be chosen, the one with higher difficulty is chosen, since that is a reflection of the fact that blocks were produced by in-turn block producers. This is simply to provide some sense of finality to the user on Bor.
 
 ## View Change
 
-After each span, Bor changes view. It means that it fetches new producers for the next span. 
+After each span, Bor changes view. It means that it fetches new producers for the next span.
 
 ### Commit span
 
@@ -157,7 +157,7 @@ header.Extra = header.Vanity + header.ProducerBytes /* optional */ + header.Seal
 
 ## State sync from Ethereum Chain
 
-Bor provides a mechanism where some specific events on the main Ethereum chain are relayed to Bor. This is also how deposits to plasma contracts are processed.
+Bor provides a mechanism where some specific events on the main Ethereum chain are relayed to Bor.
 
 1. Any contract on Ethereum may call [syncState](https://github.com/maticnetwork/contracts/blob/develop/contracts/root/stateSyncer/StateSender.sol#L33) in `StateSender.sol`. This call emits `StateSynced` event: https://github.com/maticnetwork/contracts/blob/develop/contracts/root/stateSyncer/StateSender.sol#L38
 

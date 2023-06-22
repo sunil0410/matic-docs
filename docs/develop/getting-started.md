@@ -38,7 +38,7 @@ team and the community by subscribing to the
 ## Key Features of Polygon
 
 - **Speed**: The Polygon Network uses a high-throughput blockchain with consensus provided by a group of Block Producers selected by stakeholders at each checkpoint. A Proof of Stake layer is used to validate blocks and periodically post proofs of Block Producers to the Ethereum mainnet. This enables rapid block confirmation rates of about 2 seconds while preserving a high amount of decentralization, resulting in excellent throughput for the network.
-- **Scalability**: Polygon Network achieves a hypothetical transaction speed of fewer than 2 seconds on a single sidechain. Using multiple sidechains helps the network to handle millions of transactions per second. This mechanism (already demonstrated in the first Matic sidechain) allows the Polygon network to scale easily.
+- **Scalability**: Polygon Network achieves a theoretical transaction speed of fewer than 2 seconds.
 - **Security**: Polygon's smart contracts rely on Ethereum’s security. To safeguard the network, it employs three critical security models. It uses Ethereum's **staking management contracts** and a group of incentivized validators running **Heimdall** and **Bor** nodes. Developers can also implement both models (Hybrid) into their dApp.
 
 ## Building on Polygon

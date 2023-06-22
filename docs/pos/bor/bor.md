@@ -7,13 +7,13 @@ keywords:
   - matic
   - Bor Architecture
   - polygon
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Bor Architecture
 
-Polygon is a hybrid **Plasma + Proof-of-Stake (PoS)** platform. We use a dual-consensus architecture on the Polygon Network to optimise for speed and decentralisation. We consciously architected the system to support arbitrary state transitions on our sidechains, which are EVM-enabled.
+Polygon PoS mainnet uses dual-consensus architecture on the Polygon Network to optimise for speed and decentralisation.
 
 ## Architecture
 
@@ -40,15 +40,15 @@ For Polygon, the node is designed with a two layer implementation Heimdall (Vali
 
 Heimdall (the All-Protector) is the purveyor of all that happens in the Polygon Proof-of-Stake system – good or bad.
 
-Heimdall is our Proof-of-Stake Verifier layer, which is responsible for checkpointing a representation of the Plasma blocks to the main chain in our architecture. We have implemented this by building on top of the Tendermint consensus engine with changes to the signature scheme and various data structures.
+Heimdall is our Proof-of-Stake Verifier layer, which is responsible for checkpointing a representation of the blocks to the main chain in our architecture. We have implemented this by building on top of the Tendermint consensus engine with changes to the signature scheme and various data structures.
 
 For more information, please read [https://blog.matic.network/heimdall-and-bor-matic-validator-and-block-production-layers/](https://blog.matic.network/heimdall-and-bor-matic-validator-and-block-production-layers/).
 
 ## Bor (Block Producer layer)
 
-The Bor node implementation is basically the sidechain operator. The sidechain VM is EVM-compatible. Currently, it is a basic Geth implementation with custom changes done to the consensus algorithm. However, this will be built from the ground up to make it lightweight and focused.
+The Bor node implementation is basically the EVM-compatible blockchain operator. Currently, it is a basic Geth implementation with custom changes done to the consensus algorithm. However, this will be built from the ground up to make it lightweight and focused.
 
-Bor is our Block producer layer, which in sync with Heimdall selects the producers and verifiers for each span and sprint. Interaction for the users of Polygon take place on this sidechain, which is EVM compatible to avail the functionality and compatibility of Ethereum developer tooling and applications. 
+Bor is our Block producer layer, which in sync with Heimdall selects the producers and verifiers for each span and sprint.
 
 ### Polygon Chain
 
@@ -62,7 +62,7 @@ The Ethereum Virtual Machine (EVM) is a powerful, sandboxed virtual stack embedd
 
 Block Producers for the Bor layer are a committee selected from the Validator pool on the basis of their stake, which happens at regular intervals and is shuffled periodically. These intervals are decided by the Validator's governance with regards to dynasty and network.
 
-Ratio of Stake/Staking power specifies the probability to be selected as a member of the block producer committee. 
+Ratio of Stake/Staking power specifies the probability to be selected as a member of the block producer committee.
 
 <img src={useBaseUrl("img/Bor/bor-span.png")} />
 
@@ -114,9 +114,9 @@ System call is an internal operator address which is under EVM. This helps to ma
 
 ### Bor Fee Model
 
-For normal transaction, fees in Matic token gets collected and distributed to block producers, similar to Ethereum transactions. 
+For normal transaction, fees in Matic token gets collected and distributed to block producers, similar to Ethereum transactions.
 
-Like other blockchains, Polygon has a native token called Matic(MATIC). MATIC is an ERC20 token used primarily for paying gas(transaction fees) on Polygon and staking. 
+Like other blockchains, Polygon has a native token called Matic(MATIC). MATIC is an ERC20 token used primarily for paying gas(transaction fees) on Polygon and staking.
 
 :::info
 
@@ -126,7 +126,7 @@ An important thing to note is that on the Polygon chain, the MATIC tokens works 
 
 For genesis-contracts, `gasPrice` and `gasLimit` works same as Ethereum, but during the execution it won't deduct the fees from sender's account.
 
-Genesis transactions from current validators are executed with `gasPrice = 0`. 
+Genesis transactions from current validators are executed with `gasPrice = 0`.
 
 Also, validators have to send following types of transaction like State proposals like deposits & Span proposals on Bor.
 

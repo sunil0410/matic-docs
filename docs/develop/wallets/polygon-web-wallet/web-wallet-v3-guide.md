@@ -37,7 +37,7 @@ Once you connect your account with the Web Wallet, you will be taken to the land
 - **Polygon Staking**: your go-to place for staking and getting rewards with your MATIC tokens
 - and the **Polygon Safe Bridge**.
 
-Click on the Polygon Wallet or Polygon Bridge, and you will see all your token balances on the Polygon Wallet across the bridges (PoS and Plasma).
+Click on the Polygon Wallet or Polygon Bridge, and you will see all your token balances on the Polygon Wallet across the bridges.
 
 <img src={useBaseUrl("img/wallet/v3/landing-page.png")} width="100%" height="100%"/>
 
@@ -146,55 +146,6 @@ Withdrawing funds from Polygon back to the Ethereum Mainnet via PoS Bridge is an
 5. Once the checkpoint has arrived, you will need to **confirm the second transaction**. Then, when you have confirmed the second transaction, you will receive your funds back on Ethereum.
 
   <div align="center"><img src={useBaseUrl("img/wallet/v3/pos/completed.png")} width="50%" height="50%"/></div>
-
-### On Plasma Bridge
-
-Withdrawing funds from Polygon back to the Ethereum mainnet via Plasma Bridge is a simple process but with a **challenge period**. You can either watch the **video tutorial** here or follow the **step-by-step guide** provided below.
-
-<div align="center">
-<video loop autoplay width="70%" height="70%" controls="true" >
-  <source type="video/mp4" src="/img/wallet/v3/plasma/withdraw-plasma-v3.mov"></source>
-  <p>Your browser does not support the video element.</p>
-</video>
-</div>
-
-#### Step-by-step guide
-
-1. To withdraw funds, click on the **Withdraw** link from any of the Plasma token types on **Your tokens** on the **Polygon Mainnet** section.
-
-  <img src={useBaseUrl("img/wallet/v3/plasma/balances.png")} width="100%" height="100%"/>
-
-2. You will be redirected to the Bridge page where you need to enter the **Withdraw Amount**.
-
-  <img src={useBaseUrl("img/wallet/v3/plasma/bridge.png")} width="100%" height="100%"/>
-
-3. Once you have added the amount that you want to withdraw, you can then click on the **Transfer** button. After that, you need to click on the **Continue** button on the next popup.
-
-  <div align="center"><img src={useBaseUrl("img/wallet/v3/plasma/please-note.png")} width="50%" height="50%" /></div>
-
-  You will see a **Transfer Overview** popup with an estimate of the total gas required for the transaction:
-
-  <div align="center"><img src={useBaseUrl("img/wallet/v3/plasma/transfer-overview.png")} width="50%" height="50%"/></div>
-
-  Click on the **Continue** button from the **Transfer Overview** popup and you will see a popup opening, similar to the previous one where you can review your transaction details.
-
-  <div align="center"><img src={useBaseUrl("img/wallet/v3/plasma/review-transfer.png")} width="50%" height="50%" /></div>
-
-  This will be the first of 3 transactions that will need to be completed.
-
-  <div align="center"><img src={useBaseUrl("img/wallet/v3/plasma/transfer-progress.png")} width="50%" height="50%"/></div>
-
-4. The first transaction is to initiate your withdrawal. Once the withdrawal transaction is initiated, you need to wait for the checkpoint to arrive. This could take up to 3 hours to complete.
-
-  <div align="center"><img src={useBaseUrl("img/wallet/v3/plasma/checkpoint-arrived.png")} width="50%" height="50%"/></div>
-
-5. Once the checkpoint has arrived, you need to confirm a new transaction to enter the **7-day challenge period**.
-
-  <div align="center"><img src={useBaseUrl("img/wallet/v3/plasma/challenge-completed.png")} width="50%" height="50%"/></div>
-
-6. To get funds back to Ethereum you will need to confirm one last time. Once you have confirmed all these transactions, you will receive your funds back on Ethereum.
-
-  <div align="center"><img src={useBaseUrl("img/wallet/v3/plasma/transfer-completed.png")} width="50%" height="50%"/></div>
 
 ## Swap for Gas
 

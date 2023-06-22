@@ -47,10 +47,7 @@ Here are some links that might be useful for new Web3 developers and anyone who 
 
 ## Learn More about Blockchain
 
-- [Sidechains and Plasma](https://docs.polygon.technology/docs/home/blockchain-basics/sidechain)
 - [Polygon's Architecture and Security](https://docs.polygon.technology/docs/home/architecture/security-models)
-- [When to use Plasma?](https://docs.polygon.technology/docs/home/architecture/security-models)
-- [Moving Assets from Ethereum to Polygon: the Plasma way](/docs/develop/ethereum-polygon/matic-js/get-started.md)
 - [Integrating Webhooks](https://docs.alchemy.com/alchemy/enhanced-apis/notify-api/using-notify)
 - [Archive Nodes with Debug namespace](https://www.quicknode.com/chains/matic?utm_source=polygon_docs&utm_campaign=ploygon_docs_contract_guide)
 

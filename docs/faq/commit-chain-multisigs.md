@@ -32,9 +32,9 @@ To be clear, the current multisigs cannot censor transactions like bridge transa
 
 | Multisig Address  | **5/9 multisig <br/>0xFa7D2a996aC6350f4b56C043112Da0366a59b74c**                                 |
 |:--------------:|----------------------------------------|
-| Purpose  | To upgrade POS/Plasma and staking contracts on Ethereum* <br/>|
+| Purpose  | To upgrade POS and staking contracts on Ethereum* <br/>|
 | Chain      | Ethereum                                 |
-| Rights    |<ul> <li>Update staking contracts for staking optimisations, features and upgradations </li> <li>Be able to fix unexpected and unforeseen bugs on POS/Plasma contracts</li></ul>|
+| Rights    |<ul> <li>Update staking contracts for staking optimisations, features and upgradations </li> <li>Be able to fix unexpected and unforeseen bugs on POS contracts</li></ul>|
 | Signatories    |<ul><li> Quickswap </li> <li>Curve </li> <li>Polygon </li> <li>Horizon Games </li> <li>Cometh  </li></ul>|
 
 

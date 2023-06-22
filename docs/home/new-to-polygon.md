@@ -16,10 +16,6 @@ Polygon is a scaling solution for public blockchain networks. Polygon PoS chain 
 
 Blockchain is a shared, immutable ledger for recording transactions, tracking assets and building trust. Head over to [Blockchain Basics](blockchain-basics/basics-blockchain.md) section to read more.
 
-## What is a Sidechain?
-
-Think of a Sidechain as a clone of a **parent blockchain**, supporting transfer of assets to and from the main chain. It is simply an alternate to parent chain that creates a new blockchain with its own mechanism of creating blocks (consensus mechanism). Connecting a sidechain to a parent chain involves setting up a method of moving assets between the chains.
-
 ## Types of Interaction on Polygon
 
 - [Polygon PoS chain](/develop/getting-started.md)

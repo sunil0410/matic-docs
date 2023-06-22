@@ -13,14 +13,6 @@ image: https://matic.network/banners/matic-network-16x9.png
 slug: dapp-fauna-polygon-react
 ---
 
-**dApps**, or decentralized applications, are apps built on the blockchain structure. There are different types of blockchains that applications can be built off of - some you might’ve heard of are Solana and Ethereum. These primary networks are sometimes supplemented by **sidechains**, or secondary blockchains, that run parallel to the primary blockchain. Sidechains, such as Polygon, allow for tokens and other digital assets to be used between multiple blockchains, greatly expanding the capabilities of primary blockchains and allowing use cases such as reduction of transaction fees, making primary blockchains more scalable, and having more optimized transaction traffic and capacity since sidechains only periodically update their root chain, while primary blockchains update every new block.
-
-The use cases for dApps are expanding by the day - due to its growing popularity, more and more apps are imagining how they can fit their application into the decentralized world. Just as with centralized apps, some of these dApps may still require the usage of private data for scenarios like authenticating identities or purchasing something that’s being shipped to your physical address.
-
-Having private application data transmitted and stored on a public blockchain, while necessary for dApps, can end up causing huge privacy breaches from bad actors. So how can we protect private data from making its way into the public and immutable nature of the blockchain?
-
-## Safeguarding your dApp data with Fauna, Polygon, and React
-
 In this tutorial, we’ll be building a simple allowlisting app that utilizes React for the UI and functionality, the Polygon sidechain for transactions, and Fauna for storing private data from transactions that we may not necessarily want to surface publicly in the blockchain. “Allowlisting”, also known as “whitelisting”, is a concept that is very common in the decentralized world - when signing up for a allowlist, you typically gain access to special privileges, such as being able to be the first to purchase digital assets.
 
 ![img](/img/dapp-fauna-polygon-react/polygon-fauna-app.gif)

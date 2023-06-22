@@ -54,14 +54,6 @@ Please watch the video below or follow [this tutorial](/docs/develop/wallets/pol
   <p>Your browser does not support the video element.</p>
 </video>
 
-## How can I withdraw funds from Polygon to Ethereum via Plasma Bridge using Polygon Wallet Suite?
-Please watch the video below or follow [this tutorial](/docs/develop/wallets/polygon-web-wallet/web-wallet-v3-guide.md#withdrawing-funds-from-polygon-back-to-ethereum-on-plasma-bridge).
-
-<video loop autoplay width="70%" height="70%" controls="true" >
-  <source type="video/mp4" src="/img/wallet/v3/plasma/withdraw-plasma-v3.mov"></source>
-  <p>Your browser does not support the video element.</p>
-</video>
-
 ## How to add a new or custom token to Polygon Wallet Token list?
 Please follow  [this tutorial](/docs/faq/adding-a-custom-token).
 
@@ -141,27 +133,17 @@ Checkpoints sometimes take more than 45 minutes to 1 hour based on network conge
 
 We have listed some common errors that users might face. You can find the solution below the image of the error. In case you're shown a different error, please [raise a support ticket](https://support.polygon.technology/support/home) for our team to troubleshoot.
 
-  - ### Common Errors
-  a. Withdrawal stuck on the Initialised phase.
+### Common Errors
 
-    <img src={useBaseUrl("img/wallet-bridge/plasma-progress-stuck.png")} width="357" height="800"/>
+<img src={useBaseUrl("img/wallet-bridge/checkpoint-rpc-error.png")} width="357" height="600"/>
 
-    This normally occurs when the transaction gets replaced and the wallet web application is not able to detect the replaced transaction hash. Please follow the instructions on [https://withdraw.polygon.technology/](https://withdraw.polygon.technology/) and complete your withdrawal.
+The current RPC error you're facing might be due to an RPC overload.
 
-  b. RPC Error
+Please try changing your RPC and proceed with the transaction. You may follow this link [here](https://docs.polygon.technology/docs/operate/network#matic-mainnet) for more information.
 
-    <img src={useBaseUrl("img/wallet-bridge/checkpoint-rpc-error.png")} width="357" height="600"/>
+<img src={useBaseUrl("img/wallet-bridge/checkpoint-stumbled-error.png")} width="357" height="600"/>
 
-    The current RPC error you're facing might be due to an RPC overload.
-
-    Please try changing your RPC and proceed with the transaction. You may follow this link [here](https://docs.polygon.technology/docs/operate/network#matic-mainnet) for more information.
-
-  c.
-
-  <img src={useBaseUrl("img/wallet-bridge/checkpoint-stumbled-error.png")} width="357" height="600"/>
-
-  This is usually an off-and-on error that gets resolved automatically. In case you are still receiving the same error while reinitiating the step, do [raise a support ticket](https://support.polygon.technology/) with all the relevant information to troubleshoot this further.
-
+This is usually an off-and-on error that gets resolved automatically. In case you are still receiving the same error while reinitiating the step, do [raise a support ticket](https://support.polygon.technology/) with all the relevant information to troubleshoot this further.
 
 ## I'm shown an insufficient balance error.
 
@@ -182,7 +164,7 @@ You probably have prior pending transactions, please cancel or speed them up fir
 
 ## It shows Polygon does not charge any amount for a withdrawal but we are to pay during the transaction.
 
-A withdrawal transaction with the Plasma bridge is split into 3 steps, one that happens on the Polygon Mainnet and two steps that are to be completed on the Ethereum Mainnet. On the PoS bridge, the withdrawal transaction happens over two steps: Token burning on the Polygon network and proof submission on the Ethereum network. In every case, token burning that happens on the Polygon Mainnet will be a very minimal cost. The remaining steps that happen on the Ethereum Mainnet will have to be paid in ETH depending on the current gas price which can be verified [here](https://ethgasstation.info/).
+On the PoS bridge, the withdrawal transaction happens over two steps: Token burning on the Polygon network and proof submission on the Ethereum network. Token burning that happens on the Polygon Mainnet will be a minimal cost. The remaining steps that happen on the Ethereum Mainnet will have to be paid in ETH depending on the current gas price which can be verified [here](https://ethgasstation.info/).
 
 ## I was trying to make a deposit but the transaction stopped at the Approve step.
 
@@ -214,7 +196,7 @@ https://metamask.zendesk.com/hc/en-us/articles/4408552261275
 
 ## Why isn’t the MATIC token supported on PoS?
 
-MATIC is the native token of Polygon and it has a contract address - 0x0000000000000000000000000000000000001010 on the Polygon chain. It is also used to pay for gas. Mapping the MATIC token on the PoS bridge will lead to MATIC having an additional contract address on the Polygon chain. This will collide with the existing contract address as this new token address can not be used to pay for gas and will have to remain as a normal ERC20 token on the Polygon chain. Hence, to avoid this confusion, we decided to retain MATIC only on Plasma.
+MATIC is the native token of Polygon and it has a contract address - 0x0000000000000000000000000000000000001010 on the Polygon chain. It is also used to pay for gas. Mapping the MATIC token on the PoS bridge will lead to MATIC having an additional contract address on the Polygon chain. This will collide with the existing contract address as this new token address can not be used to pay for gas and will have to remain as a normal ERC20 token on the Polygon chain.
 
 ## How do I map tokens?
 

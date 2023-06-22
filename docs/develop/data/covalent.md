@@ -24,29 +24,6 @@ Please view the third-party content disclaimer [<ins>here</ins>](https://github.
 
 ---
 
-## Introduction
-
-Polygon brings massive scale to Ethereum using an adapted version of Plasma
-with PoS based sidechains that provides a solution for faster and extremely
-low-cost transactions with finality on the main chain. The Polygon network ensures
-liveliness using PoS checkpoints which are pushed to the Ethereum mainchain.
-This enables a single Polygon sidechain to theoretically achieve `2^16` transactions
-per block, and possibly millions of transactions on multiple chains in the future.
-
-### Quick facts
-
-<TableWrap>
-
-|Property|Value|
-|---|---|
-|Polygon Mainnet chainId|`137`|
-|Polygon Mumbai Testnet chainId|`80001`|
-|Polygon Blockchain Explorer|https://polygonscan.com/|
-|Block time|~3 seconds|
-|Data refresh latency|~6 seconds or 2 Blocks|
-
-</TableWrap>
-
 :::tip Quickstart
 
 Check out **[<ins>this introduction video</ins>](https://www.youtube.com/watch?v=qhibXxKANWE)**

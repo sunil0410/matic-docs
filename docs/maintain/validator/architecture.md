@@ -21,7 +21,7 @@ The Polygon Network is broadly divided into three layers:
 
 <img src={useBaseUrl("img/staking/architecture.png")} />
 
-## Staking and Plasma smart contracts on Ethereum
+## Staking smart contracts on Ethereum
 
 To enable the [Proof of Stake (PoS)](/docs/home/polygon-basics/what-is-proof-of-stake) mechanism on Polygon, the system employs a set of [staking](/docs/maintain/glossary.md#staking) management contracts on the Ethereum mainnet.
 
@@ -35,7 +35,7 @@ The PoS mechanism also acts as a mitigation to the data unavailability problem f
 
 ## Heimdall (validation layer)
 
-Heimdall layer handles the aggregation of blocks produced by [Bor](/docs/maintain/glossary.md#bor) into a Merkle tree and publishing the Merkle root periodically to the root chain. The periodic publishing of snapshots of the Bor sidechain are called [checkpoints](/docs/maintain/glossary.md#checkpoint-transaction).
+Heimdall layer handles the aggregation of blocks produced by [Bor](/docs/maintain/glossary.md#bor) into a Merkle tree and publishing the Merkle root periodically to the root chain. The periodic publishing of snapshots of Bor are called [checkpoints](/docs/maintain/glossary.md#checkpoint-transaction).
 
 For every few blocks on Bor, a validator on the Heimdall layer:
 

@@ -6,57 +6,8 @@
  */
 
 module.exports = {
-
-  /*
-  basics: [
-    {
-      type: "html",
-      value: "Learning Hub",
-      className: "sidebar-title",
-    },
-    "home/new-to-polygon",
-    {
-      type: "category",
-      label: "Blockchain Basics",
-      link: {
-        type: "generated-index",
-      },
-      collapsed: false,
-      items: [
-        "home/blockchain-basics/blockchain",
-        "home/blockchain-basics/blockchain-types",
-        "home/blockchain-basics/consensus-mechanism",
-        "home/blockchain-basics/ethereum",
-        "home/blockchain-basics/solidity",
-        "home/blockchain-basics/transactions",
-        "home/blockchain-basics/gas",
-        "home/blockchain-basics/accounts",
-        "home/blockchain-basics/sidechain",
-        "home/blockchain-basics/import-account-to-metamask",
-      ],
-    },
-    {
-      type: "category",
-      label: "Polygon Basics",
-      link: {
-        type: "generated-index",
-      },
-      collapsed: false,
-      items: [
-        "home/polygon-basics/what-is-polygon",
-        "home/polygon-basics/what-is-proof-of-stake",
-        "maintain/polygon-basics/who-is-delegator",
-        "maintain/polygon-basics/who-is-validator",
-        "home/architecture/polygon-architecture",
-        "home/polygon-basics/zkEVM-basics",
-      ],
-    },
-    "home/faq",
-  ],
-*/
   delegate: [
     "maintain/delegate/delegate",
-    //"maintain/delegate/delegator-faq"
   ],
 
   govern: [
@@ -240,14 +191,6 @@ module.exports = {
           ],
         },
         "operate/genesis-contracts",
-        {
-          type: "category",
-          label: "Plasma Contracts",
-          link: {
-            type: "generated-index",
-          },
-          items: ["develop/advanced/calling-plasma-contracts"],
-        },
       ],
     },
     {
@@ -487,45 +430,6 @@ module.exports = {
       ],
     },
   ],
-  integrate: [
-    "integrate/quickstart",
-    {
-      type: "category",
-      label: "Network Information",
-      link: {
-        type: "generated-index",
-      },
-      items: [
-        "integrate/network",
-        {
-          type: "category",
-          label: "Network Details",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "integrate/network-detail",
-            {
-              type: "link",
-              label: "Polygon-Mainnet",
-              href: "https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json",
-            },
-            {
-              type: "link",
-              label: "Mumbai",
-              href: "https://static.polygon.technology/network/testnet/mumbai/index.json",
-            },
-          ],
-        },
-        {
-          type: "link",
-          label: "Polygon Faucet",
-          href: "https://faucet.polygon.technology/",
-        },
-      ],
-    },
-  ],
-
   maticjs: [
     {
       type: "html",
@@ -768,18 +672,6 @@ module.exports = {
           items: [
             "pos/contracts/stakingmanager",
             "pos/contracts/delegation",
-            {
-              type: "category",
-              label: "Plasma Contracts",
-              link: {
-                type: "generated-index",
-              },
-              items: [
-                "pos/contracts/plasma_contracts/account_based_plasma",
-                "pos/contracts/plasma_contracts/predicates",
-                "pos/contracts/plasma_contracts/important-contracts",
-              ],
-            },
           ],
         },
         {
@@ -923,11 +815,8 @@ module.exports = {
   ],
 
   faq: [
-    "faq/general-faq",
     "faq/technical-faqs",
-    // "faq/delegator-faq",
     "faq/commit-chain-multisigs",
-    // "maintain/delegate/delegator-faq",
     "faq/validator-faq",
     "faq/staking-faq",
     "faq/wallet-bridge-faq",

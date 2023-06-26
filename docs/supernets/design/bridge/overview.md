@@ -1,7 +1,7 @@
 ---
 id: overview
 title: Introduction to Native Supernet Bridging
-sidebar_label: Introduction to native Supernet bridging
+sidebar_label: Overview
 description: "Learn about the native bridge of Supernets."
 keywords:
   - docs
@@ -13,24 +13,15 @@ keywords:
   - cross chain
 ---
 
-:::warning The bridge should not yet be used in production environments
-:::
-
-:::caution Bridge as an Attack Vector
-The cross-chain bridge can be an attack vector if not properly managed. Ensure you fully understand its functionality, potential vulnerabilities, and security measures before use. Expertise in this area is crucial for maintaining system security.
-:::
-
-:::caution Arbitrary message transfers
-
-The bridging mechanism in Supernets currently supports the ERC-20, ERC-721, and ERC-1155 token standards for asset transfer. However, customization may be required for transferring arbitrary messages, including other asset standards, as Supernets are still in active development mode.
-
-:::
-
 ## Overview
 
 Supernets provide a built-in bridging mechanism that enables cross-chain communication. The bridging mechanism is a technical infrastructure that facilitates the transfer of of arbitrary messages between any EVM-compatible PoS blockchain (rootchain), and a Supernet. 
 
 It relies on mapping between the token contracts on the rootchain and the target chain, which is crucial for tracking assets and ensuring the correct amount of tokens are minted and burned during the transfer process.
+
+:::caution Bridge as an Attack Vector
+The cross-chain bridge can be an attack vector if not properly managed. Ensure you fully understand its functionality, potential vulnerabilities, and security measures before use. Expertise in this area is crucial for maintaining system security.
+:::
 
 During the transfer process, assets are locked in a contract on the rootchain, and an equivalent amount of tokens are minted on the target chain. When assets are withdrawn from the target chain, the corresponding tokens are burned, and the assets are unlocked on the rootchain. Smart contracts on both the rootchain and the target chain are used to facilitate these processes, ensuring that the asset transfer is secure and transparent.
 

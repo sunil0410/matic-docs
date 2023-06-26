@@ -24,9 +24,8 @@ defaultValue="common"
 values={[
 { label: 'Common', value: 'common', },
 { label: 'Migration', value: 'migrate', },
-{ label: 'Validators', value: 'validator', },
-{ label: 'Assets', value: 'assets', },
-{ label: 'Blocks', value: 'blocks', },
+{ label: 'Node & Validators', value: 'validator', },
+{ label: 'Assets & Bridge', value: 'assets', },
 { label: 'Rootchain', value: 'rootchain', },
 ]
 }>
@@ -39,15 +38,17 @@ values={[
 
 ## What is the relation between Supernets and Edge?
 
-Supernets are built on top of an updated version of the legacy Edge client. This iteration of the client is designed specifically to enable next-generation EVM-compatible, application-specific sovereign blockchains. The logic for Supernets was first introduced in the [v0.7.0 release](https://github.com/0xPolygon/polygon-edge/releases/tag/v0.7.0-alpha1) of the Edge client.
+Supernets are built on top of an updated version of the legacy Edge client. This iteration of the client is designed specifically to enable next-generation EVM-compatible, application-specific sovereign blockchains.
 
-:::caution The state of Polygon Edge
+:::info Edge + Supernets = Geth + Ethereum
 
-The releases of the Edge client, **starting from version 0.7.x and beyond,
-are related explicitly to Supernets, while versions 0.6.x and older are
-for the older versions of the Polygon Edge client**.
+Before diving into the documentation, please keep the following points in mind:
 
-However, it's important to note that **as of [v0.8.0](https://github.com/0xPolygon/./polygon-edge/releases/tag/v0.8.0), the legacy Edge client will no longer be supported by Polygon Labs**. The **Edge documentation on the Polygon Wiki will also be archived**. Developers are encouraged to build with Polygon Supernets for support.
+- **The Polygon Labs team will prioritize the latest version of the Edge client and as a result, will no longer provide support for older versions (v0.6.3 and earlier).**
+
+  The Edge repository will remain accessible, and users may fork it and use it as they wish, subject to applicable open-source license terms. It is **highly recommended to upgrade to the latest version**, which includes the most up-to-date features and fixes. However, users who prefer to stay on older versions may continue to do so.
+
+- **Polygon Edge serves as a consensus client implementation for Polygon Supernets, much like how Geth serves as a client implementation for Ethereum.** Both Geth and Edge serve as intermediaries between nodes and their respective blockchains, allowing users to interact with the network and take advantage of its benefits. To draw an analogy, Geth and Edge are to Ethereum and Supernets what web browsers are to the internet, enabling users to access and interact with the network.
 
 :::
 
@@ -143,19 +144,39 @@ To upgrade to a new blockchain with PolyBFT consensus using IBFT 2.0, you'll nee
 
 For more information on the migration process, please refer to the migration guide available [<ins>here</ins>](/docs/supernets/operate/ibft-to-polybft.md).
 
-## Will there be migration support for v0.9 to v1.0?
-
-Yes, regenesis support for state migration from v0.9 to v1.0 is planned. For production releases beyond v1.0, the goal is to support the migration of both state and data and provide clear upgrade paths.
-
-**Please note that further details on migration support will be provided as they become available.**
-
 </TabItem>
 
 <!-- ===================================================================================================================== -->
-<!-- ================================================== VALIDATOR FAQs =================================================== -->
+<!-- =========================================== NODE & VALIDATOR FAQs =================================================== -->
 <!-- ===================================================================================================================== -->
 
 <TabItem value="validator">
+
+## Does the current implementation support configuration of an RPC node and full node?
+
+Presently, the system does not support such configurations. All nodes function as archive nodes, maintaining the entire blockchain history. The deployment workflow distinguishes only between validators and non-validators.
+
+## How can I monitor my nodes?
+
+You can use common tools like [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) to monitor your nodes. These tools can help you track important metrics like CPU usage, memory consumption, and network activity. Additionally, you can use block explorers like Polygonscan to monitor your node's health and activity.
+
+We will also provide monitoring node guides, as well as tutorials on how to *upgrade* or *migrate* and test shortly.
+
+## What is the block interval in Edge?
+
+Edge is configured to generate blocks every second, but the interval between blocks can vary due to the dynamic nature of block production. The `edge_consensus_block_interval` is computed based on the difference between block headers, which have a timestamp field with only 1-second precision. The interval can never be 0 based on the PolyBFT consensus rules.
+
+## Why can't two blocks have the same timestamp?
+
+The timestamp field in the block headers only has 1-second precision. Therefore, it's not possible for two blocks to have the same timestamp. Based on the PolyBFT consensus rules, two blocks won't be produced in the same second.
+
+## What causes the variability in block production times?
+
+Because the system clock and block production are not phase-locked, there can be slight variations in the time it takes to produce each block. These variations can be caused by a number of factors, such as network latency, differences in computational power between validators, and the availability of resources like memory and disk space. Additionally, PolyBFT ensures that blocks are not produced too frequently or too infrequently, which can also contribute to variations in block production times. Still, the system is designed to ensure that blocks are produced reliably and at a predictable rate.
+
+## Is it possible to phase lock the system clock and block production in Edge?
+
+No, it's not possible to phase lock the system because we wouldn't produce a block in less than a second. This dynamic is fundamental to the way that times are being stored in the block headers and the rate at which blocks are being produced. It doesn't speak to the variability of block production times.
 
 ## What is the minimum and maximum validator size?
 
@@ -181,12 +202,6 @@ To maintain the security of the network, it is recommended that you keep the val
 
 Running one Supernet node in "relayer" mode can enable automatic execution of deposit events. This can help streamline the deposit process and improve the overall efficiency of the network.
 
-## How can I monitor my nodes?
-
-You can use common tools like [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) to monitor your nodes. These tools can help you track important metrics like CPU usage, memory consumption, and network activity. Additionally, you can use block explorers like Polygonscan to monitor your node's health and activity.
-
-We will also provide monitoring node guides, as well as tutorials on how to *upgrade* or *migrate* and test shortly.
-
 </TabItem>
 
 <!-- ===================================================================================================================== -->
@@ -203,15 +218,15 @@ Although it is recommended to use the standard ERC-20, ERC-721, and ERC-1155 con
 
 To create and manage native assets on a Supernet or enable asset bridging between a Supernet and rootchain, it is recommended to use the core contracts provided by the network.
 
-## Do I have to use the native bridge integration for Supernets?
+## Is it necessary to use the native bridge integration for Supernets?
 
-Yes, the native bridge integration is now mandatory with the latest v0.9 test release. The native bridge integration utilizes PolyBFT consensus, allowlisting, and a range of premium tools, which are crucial for the proper functioning of the network.
+Yes, it's essential. The native bridge integration is fundamental for Supernets as it hosts the staking logic on the rootchain, which serves as the authoritative source of truth for the Supernet.
 
-The bridge logic consists of predicate contracts for cross-chain message passing, a relayer to execute calls and transactions, and a JSON-RPC endpoint to the rootchain.
+While customization is possible, it should be undertaken with a comprehensive understanding of the system. If preferred, the product suite can be used solely for the childchain instance.
 
 ## Can the gas token be different from the staking token in Supernets?
 
-Yes, Supernets allows for the decoupling of the native gas token and the staking token, as per the v0.9 release. You can set any ERC-20 token as your gas token, and use MATIC for staking.
+Yes, Supernets allows for the decoupling of the native gas token and the staking token. You can set any ERC-20 token as your gas token, and use MATIC for staking.
 
 Decoupling the gas token and the staking token provides greater flexibility and enables more use cases for the network. However, it's important to note that the specifics of how this is configured may depend on the specific implementation of the network you're using.
 
@@ -219,29 +234,25 @@ Decoupling the gas token and the staking token provides greater flexibility and 
 
 To create the initial supply of tokens when launching a new Supernet instance, premining or minting can be used. This can help ensure that the network has the necessary tokens to facilitate transactions and operations.
 
-</TabItem>
+## Why does the Exit process revert when onL2StateReceive fails?
 
-<!-- ===================================================================================================================== -->
-<!-- ==================================================== BLOCK FAQs ===================================================== -->
-<!-- ===================================================================================================================== -->
+The system prevents potential double spending and other attacks by marking any exit event that fails to be processed by the rootchain predicate as "failed." Without this safeguard, the same event could be re-executed multiple times.
 
-<TabItem value="blocks">
+## Can checkpoint frequency be influenced or triggered earlier, such as when bridge requests are pending?
 
-## What is the block interval in Edge?
+Checkpoints are currently dispatched at the end of each epoch or every 900 blocks, a hardcoded value. A future update aims to adjust parameters through a hard fork mechanism. Notably, any participant can submit a checkpoint, as data is produced for each block.
 
-Edge is configured to generate blocks every second, but the interval between blocks can vary due to the dynamic nature of block production. The `edge_consensus_block_interval` is computed based on the difference between block headers, which have a timestamp field with only 1-second precision. The interval can never be 0 based on the PolyBFT consensus rules.
+## How are native gas fungible tokens allocated during the genesis of the childchain?
 
-## Why can't two blocks have the same timestamp?
+At the Supernet's inception, designated accounts receive specific amounts of native gas fungible tokens. If the tokens are non-mintable, premining at genesis is prohibited, except for the 0x0 address. These accounts must bridge assets from the rootchain. Conversely, mintable tokens allow for arbitrary premining on the Supernets during genesis.
 
-The timestamp field in the block headers only has 1-second precision. Therefore, it's not possible for two blocks to have the same timestamp. Based on the PolyBFT consensus rules, two blocks won't be produced in the same second.
+## Is it necessary to mint new tokens using the associated ERC20 contract each time native gas fungible tokens are spent?
 
-## What causes the variability in block production times?
+Yes, minting occurs either on the childchain or rootchain, depending on the type of native token (mintable vs non-mintable). For non-mintable tokens, minting should occur on the rootchain, then the tokens should be deposited or bridged to the childchain, creating a new supply.
 
-Because the system clock and block production are not phase-locked, there can be slight variations in the time it takes to produce each block. These variations can be caused by a number of factors, such as network latency, differences in computational power between validators, and the availability of resources like memory and disk space. Additionally, PolyBFT ensures that blocks are not produced too frequently or too infrequently, which can also contribute to variations in block production times. Still, the system is designed to ensure that blocks are produced reliably and at a predictable rate.
+## Is there a mechanism to recover spent gas on the childchain back into an account?
 
-## Is it possible to phase lock the system clock and block production in Edge?
-
-No, it's not possible to phase lock the system because we wouldn't produce a block in less than a second. This dynamic is fundamental to the way that times are being stored in the block headers and the rate at which blocks are being produced. It doesn't speak to the variability of block production times.
+Currently, there's no identified mechanism to recuperate gas spent on the childchain back into an account.
 
 </TabItem>
 

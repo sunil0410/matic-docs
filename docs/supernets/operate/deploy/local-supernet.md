@@ -14,6 +14,8 @@ keywords:
 
 In this section, we'll prepare initiate a new chain with PolyBFT consensus and prepare the initial Supernet nodes.
 
+## 1. Generate Keys
+
 To initialize PolyBFT consensus, we need to generate the necessary secrets for each node.
 
 The `polygon-edge polybft-secrets` command is used to generate account secrets for validators. The command initializes private keys for the consensus client (validators + networking) to a Secrets Manager config file.
@@ -103,4 +105,6 @@ The generated secrets include the following information for each validator node:
 
 > The secrets output can be retrieved again if needed by running the following command: `./polygon-edge polybft-secrets --data-dir test-chain-X/ --insecure`
 
-<br/>
+## 2. Next Steps
+
+As the next step, navigate to the [Configure a New Childchain](/docs/supernets/operate/deploy/genesis.md) deployment guide. This will enable you to generate a new genesis file and define the initial validator set, facilitating the setup and configuration of the childchain's initial state.

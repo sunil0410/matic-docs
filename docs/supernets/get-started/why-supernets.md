@@ -15,11 +15,11 @@ keywords:
 
 ## Regulatory Compliance and Network Sovereignty
 
-Supernets offer network sovereignty and regulatory compliance by allowing maintainers to select validators that meet local regulations. This approach enables global networks to tailor their configurations while maintaining compliance with regional regulatory requirements.
+Supernets offer network sovereignty and regulatory compliance by allowing maintainers to select network administrators that meet local regulations. This enables global networks to tailor their configurations to maintain compliance with regional regulatory requirements.
 
 ## A New Approach to Infrastructure
 
-Supernets offer a cutting-edge approach to system infrastructure, backed by an ecosystem of premium service providers for each network. This empowers organizations with control over network properties and access while applying permissioned and permissionless infrastructure models as needed. The integration of blockchain technology and industry-leading partners provides additional guarantees in security and efficiency, transforming traditional infrastructure designs and models.
+Supernets offer a cutting-edge approach to system infrastructure, backed by an ecosystem of premium service providers. This empowers organizations with control over network properties and access while applying permissioned or permissionless infrastructure models. The integration of blockchain technology and industry-leading partners provides additional guarantees in security and efficiency, transforming traditional infrastructure designs and models.
 
 ## Tokenization and Asset Management
 
@@ -31,7 +31,7 @@ Supernets focus on flexibility, adaptability, and EVM compatibility, streamlinin
 
 ## Robust Consensus
 
-Supernets utilize the PolyBFT consensus mechanism for exceptional throughput, minimal latency, and immediate network finality. This positions them as a highly suitable platform for a variety of use cases within the Polygon PoS network.
+Supernets utilize the PolyBFT consensus mechanism for exceptional throughput, minimal latency, and immediate network finality. This positions them as a highly suitable platform for a variety of use cases.
 
 ## Cross-Chain Interoperability for Enhanced Efficiency
 

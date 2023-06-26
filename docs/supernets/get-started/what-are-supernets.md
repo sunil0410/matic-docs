@@ -15,20 +15,7 @@ keywords:
 
 ## Introduction
 
-Supernets are application-specific chains that operate on the Polygons Edge consensus client with [PolyBFT consensus](/docs/supernets/design/consensus/polybft/overview.md). They leverage a [native bridge](/docs/supernets/design/bridge/overview.md) to connect with an associated rootchain, namely, Polygon PoS mainnet, enabling them to inherit its security and capabilities. Additionally, Supernets extend the block space available on the rootchain, providing scalability and interoperability for decentralized applications. With on-chain governance mechanisms, Supernets empower communities to make decisions and upgrade the network in a transparent and compliant manner.
-
-:::info Edge + Supernets = Geth + Ethereum
-
-Before diving into the documentation, please keep the following points in mind:
-
-- **The Polygon Supernets product suite was officially introduced in v0.7.x of the Polygon Edge client.**
-- **The Polygon team will prioritize the latest version of the Edge client and as a result, will no longer provide support for older versions (v0.6.2 and earlier).**
-
-  The Edge repository will remain accessible, and users may fork it and use it as they wish, subject to applicable open-source license terms. It is **highly recommended to upgrade to the latest version**, which includes the most up-to-date features and fixes. However, users who prefer to stay on older versions may continue to do so.
-
-- **Polygon Edge serves as a consensus client implementation for Polygon Supernets, much like how Geth serves as a client implementation for Ethereum.** Both Geth and Edge serve as intermediaries between nodes and their respective blockchains, allowing users to interact with the network and take advantage of its benefits. To draw an analogy, Geth and Edge are to Ethereum and Supernets what web browsers are to the internet, enabling users to access and interact with the network.
-
-:::
+Supernets are application-specific chains that operate on the Polygons Edge consensus client with [PolyBFT consensus](/docs/supernets/design/consensus/polybft/overview.md). They leverage a [native bridge](/docs/supernets/design/bridge/overview.md) to connect with an associated rootchain, enabling them to inherit its security and capabilities. Additionally, Supernets extend the block space available on the rootchain, providing scalability and interoperability for decentralized applications. With on-chain governance mechanisms, Supernets empower communities to make decisions and upgrade the network in a transparent and compliant manner.
 
 The following table offers a comprehensive overview on what Supernets are through different perspectives.
 

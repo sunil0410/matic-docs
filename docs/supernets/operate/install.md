@@ -23,12 +23,6 @@ The Docker image is also a convenient option for containerized deployment. Build
 
 :::
 
-:::info Latest release: 1.0.0-rc1
-
-**The latest stable test release is [v1.0.0-rc1](https://github.com/0xPolygon/polygon-edge/releases/tag/v1.0.0-rc1)**
-
-:::
-
 <!-- ===================================================================================================================== -->
 <!-- ===================================================================================================================== -->
 <!-- ===================================================== GUIDE TABS ==================================================== -->
@@ -50,72 +44,13 @@ values={[
 
 <TabItem value="pre-built">
 
-<!--
-<div class="download-container">
-  <div class="download-text">
-    <p>To access the pre-built releases, visit the <a href="https://github.com/0xPolygon/polygon-edge/releases" target="_blank">GitHub Releases</a> page. Polygon Edge provides cross-compiled AMD64/ARM64 binaries for Darwin and Linux. <b>The download button will automatically provide the appropriate download link according your operating system.</b></p>
-  </div>
-  <div class="download-button">
-    <DownloadButton
-      macDownloadUrl="https://github.com/0xPolygon/polygon-edge/releases/download/v0.8.1/polygon-edge_0.8.1_darwin_amd64.tar.gz"
-      macArmDownloadUrl="https://github.com/0xPolygon/polygon-edge/releases/download/v0.8.1/polygon-edge_0.8.1_darwin_arm64.tar.gz"
-      linuxDownloadUrl="https://github.com/0xPolygon/polygon-edge/releases/download/v0.8.1/polygon-edge_0.8.1_linux_amd64.tar.gz"
-      linuxArmDownloadUrl="https://github.com/0xPolygon/polygon-edge/releases/download/v0.8.1/polygon-edge_0.8.1_linux_arm64.tar.gz"
-      buttonText="Download Polygon Supernets"
-    />
-  </div>
-</div>
-
--->
-
 To access the pre-built releases, visit the [GitHub releases page](https://github.com/0xPolygon/polygon-edge/releases). The client provides cross-compiled AMD64/ARM64 binaries for Darwin and Linux.
 
-### [For reference] Extract pre-release package
+:::info Latest release: 1.0.0
 
-Extract the downloaded package using your file system's extraction tool or the provided commands below, and navigate to the pre-built release in your preferred interface or text editor.
+**The latest stable test release is [<ins>v1.0.0</ins>](https://github.com/0xPolygon/polygon-edge/releases/tag/v1.0.0).**
 
-<Tabs
-defaultValue="linux-mac"
-values={[
-{ label: 'Linux/Mac', value: 'linux-mac', },
-{ label: 'Windows', value: 'windows', },
-]
-}>
-
-<TabItem value="linux-mac">
-
-```bash
-# replace <downloaded_package> with the actual package filename
-
-tar -xzf <downloaded_package>
-cd <downloaded_package>
-```
-
-</TabItem>
-
-<TabItem value="windows">
-
-The tar command is available in PowerShell on Windows 10 (build 17063 or newer).
-
-```bash
-# replace <downloaded_package> with the actual package filename
-
-tar -xzf <downloaded_package>
-cd <downloaded_package>
-```
-
-For older Windows systems or Command Prompt, use third-party tools like 7-Zip or WinRAR, or the PowerShell cmdlet Expand-Archive.
-
-```bash
-# replace <downloaded_package> with the actual package filename
-# replace <destination_folder> with the desired folder path for extracted files
-
-Expand-Archive -Path <downloaded_package> -DestinationPath <destination_folder>
-cd <destination_folder>
-```
-
-</TabItem>
-</Tabs>
+:::
 
 </TabItem>
 

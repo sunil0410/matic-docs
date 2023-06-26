@@ -15,38 +15,15 @@ keywords:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+In this section, we'll walk through how to configure the initial childchain state by generating a new genesis file.
+
+## 1. Overview
+
 The genesis file is a critical component in setting up a blockchain network, containing the initial validator set, genesis block, and other essential parameters that define the network's behavior. The initial validator set is responsible for bootstrapping the consensus mechanism, allowing the blockchain to function and reach consensus on new blocks.
 
 Supernets allow for customizable parameters such as the block gas limit, epoch size, and block rewards, which enable network operators to tailor the network to specific requirements. Additionally, Supernets support allowlists and blocklists for transactions and validators, providing an extra layer of control and security to the network. These lists can be used to restrict or permit specific addresses, ensuring only authorized parties can participate in the network or execute transactions.
 
-:::note ACL gas cost considerations
-
-While the use of alternative ACL-enabled contracts, such as bridge ACLs, offers finer control over cross-chain interactions, these contracts also result in increased gas consumption for transactions. As you weigh the benefits of enhanced security, keep in mind that security measures can often come with higher costs.
-
-:::
-
-It's crucial to consider these parameters carefully, as they have a significant impact on the network's performance, security, and scalability. Informed decisions are vital to building a robust and efficient blockchain network.
-
-:::caution Must enable before launching the network
-
-Keep in mind that allowlists must be enabled prior to launching the network. After the network is started, configuration of the allowlist will no longer be possible. The access control process will be initiated by the initial allowlisted addresses.
-
-:::
-
-## Generate the Genesis File
-
 To create the chain configuration, we use the `polygon-edge genesis` command, which generates the genesis file.
-
-:::info Difference between `chain-id` and `supernet-id`
-
-Supernets differentiates `chain-id` and `supernet-id` within the genesis file. 
-
-- The `chain-id` is a unique identifier for a childchain.
-- The `supernet-id` is a unique identifier that is automatically populated during the Supernet's registration process with the `StakeManager` contract. There can be multiple Supernets registered within the same `StakeManager` - the `supernet-id` is used to distinguish them.
-
-Users can assign a custom `chain-id` to their Supernet via the genesis command. However, `supernet-id` doesn't function as a flag within this command. Instead, its value is derived from the `rootchain deploy` command during the Supernet's registration process with the `StakeManager` contract.
-
-:::
 
 <details>
 <summary>Common Flags ↓</summary>
@@ -115,14 +92,32 @@ Bridge:
 
 </details>
 
-There are two ways to specify the initial validator set:
+:::note ACL gas cost considerations
 
-- **Single-Host Validator Setup**: All validator information is present in the local storage of a single host. In this case, you can provide the directory using the `--validators-path` flag and the validator folder prefix names using the `--validators-prefix` flag. To enable reward distribution, you must define a reward wallet address and its balance using the `--reward-wallet` flag. The wallet address is used to distribute reward tokens from that address to validators that signed blocks in that epoch.
-- **Multi-Host Validator Setup**: Validator information is scattered across multiple hosts. In this case, you can supply the necessary information using the `--validators` flag.
+While the use of alternative ACL-enabled contracts, such as bridge ACLs, offers finer control over cross-chain interactions, these contracts also result in increased gas consumption for transactions. As you weigh the benefits of enhanced security, keep in mind that security measures can often come with higher costs.
 
-### Deployment Options
+:::
 
-#### Create a Native Token and Premine
+It's crucial to consider these parameters carefully, as they have a significant impact on the network's performance, security, and scalability. Informed decisions are vital to building a robust and efficient blockchain network.
+
+:::caution Must enable ACLs before launching the network
+
+Keep in mind that allowlists must be enabled prior to launching the network. After the network is started, configuration of the allowlist will no longer be possible. The access control process will be initiated by the initial allowlisted addresses.
+
+:::
+
+## 2. Deployment Considerations
+
+### i. Difference between `chain-id` and `supernet-id`
+
+Supernets differentiates `chain-id` and `supernet-id` within the genesis file. 
+
+- The `chain-id` is a unique identifier for a childchain.
+- The `supernet-id` is a unique identifier that is automatically populated during the Supernet's registration process with the `StakeManager` contract. There can be multiple Supernets registered within the same `StakeManager` - the `supernet-id` is used to distinguish them.
+
+Users can assign a custom `chain-id` to their Supernet via the genesis command. However, `supernet-id` doesn't function as a flag within this command. Instead, its value is derived from the `rootchain deploy` command during the Supernet's registration process with the `StakeManager` contract.
+
+### ii. Create a Native Token and Premine
 
 | Flag                    | Description                                                                                                    |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -133,6 +128,9 @@ There are two ways to specify the initial validator set:
 
 For example, the following command creates a native token named `MyToken` with the symbol `MTK`, `18` decimal places, and a total supply of `1,000,000` tokens. It also premines `1,000` tokens to the account at address `0x61324166B0202DB1E7502924326262274Fa4358F`.
 
+<details>
+<summary>Example ↓</summary>
+
 ```bash
 ./polygon-edge genesis --block-gas-limit 10000000 --epoch-size 10 \
     --validators-path ./ --validators-prefix test-chain- \
@@ -142,10 +140,12 @@ For example, the following command creates a native token named `MyToken` with t
     --reward-wallet 0x61324166B0202DB1E7502924326262274Fa4358F:1000000
 ```
 
-> Note that you can omit the `--native-token-config` flag if you don't want to create a native token.
-> For non-mintable native tokens, premining is limited to the 0x0 address - other accounts must bridge over assets from the rootchain.
+</details>
 
-#### Enable EIP1559
+> Note that you can omit the `--native-token-config` flag if you don't want to create a native token.
+> For non-mintable native tokens, premining is limited to the `0x0` address - other accounts must bridge over assets from the rootchain.
+
+### iii. Enable EIP1559
 
 | Flag                      | Description                                                                                             |
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -155,6 +155,9 @@ For example, the following command creates a native token named `MyToken` with t
 For example, the following command enables EIP1559 by specifying the burn contract address and setting the genesis base fee to 2 GWEI:
 > The burn contract address must be specified in the format `<block>:<address>`. The genesis base fee value is in GWEI.
 
+<details>
+<summary>Example ↓</summary>
+
 ```bash
 ./polygon-edge genesis --block-gas-limit 10000000 --epoch-size 10 \
     --validators-path ./ --validators-prefix test-chain- \
@@ -162,6 +165,15 @@ For example, the following command enables EIP1559 by specifying the burn contra
     --burn-contract 100:0x1234567890ABCDEF1234567890ABCDEF12345678 \
     --genesis-base-fee 2
 ```
+
+</details>
+
+## 3. Specify Validator Set & Generate Genesis
+
+There are two ways to specify the initial validator set:
+
+- **Single-Host Validator Setup**: All validator information is present in the local storage of a single host. In this case, you can provide the directory using the `--validators-path` flag and the validator folder prefix names using the `--validators-prefix` flag. To enable reward distribution, you must define a reward wallet address and its balance using the `--reward-wallet` flag. The wallet address is used to distribute reward tokens from that address to validators that signed blocks in that epoch.
+- **Multi-Host Validator Setup**: Validator information is scattered across multiple hosts. In this case, you can supply the necessary information using the `--validators` flag.
 
 <!-- ===================================================================================================================== -->
 <!-- ==================================================== ROOTCHAIN TABS ================================================= -->
@@ -597,3 +609,9 @@ Genesis written to ./genesis.json
 
 </TabItem>
 </Tabs>
+
+## 4. Next Steps
+
+With a **genesis.json** file containing the initial chain state, validator nodes, and chain admins for your new childchain instance, you are ready to proceed.
+
+To configure the associated rootchain of the Supernet and deploy the essential rootchain core contracts, navigate to the [rootchain deployment guide](/docs/supernets/operate/deploy/rootchain-config.md).

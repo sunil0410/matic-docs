@@ -17,86 +17,11 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import DownloadButton from '@site/src/data/DownloadButton';
 
-:::warning Breaking changes
-Supernets are rapidly evolving towards their production-ready state, and, as a result, instructions and concepts in these documents are subject to change.
-
-Test releases include breaking changes and are not backward compatibility. Use the current test releases for testing and familiarization only.
-
-It is highly recommended that reach out to the Supernets team for support.
-:::
-
 Before proceeding, ensure that your system meets the necessary [system requirements](/docs/supernets/operate/system.md).
 
-## Spawn a local Supernet
-
-<!--
-<div class="download-container">
-  <div class="download-text">
-    <p><b>[EXPERIMENTAL] The download button will automatically provide the appropriate download link according your operating system.</b></p><p>For a list of releases, please visit the official release page <a href="https://github.com/0xPolygon/polygon-edge/releases"><ins>here</ins></a>.</p>
-  </div>
-  <div class="download-button">
-    <DownloadButton
-      macDownloadUrl="https://github.com/0xPolygon/polygon-edge/releases/download/v0.8.1/polygon-edge_0.8.1_darwin_amd64.tar.gz"
-      macArmDownloadUrl="https://github.com/0xPolygon/polygon-edge/releases/download/v0.8.1/polygon-edge_0.8.1_darwin_arm64.tar.gz"
-      linuxDownloadUrl="https://github.com/0xPolygon/polygon-edge/releases/download/v0.8.1/polygon-edge_0.8.1_linux_amd64.tar.gz"
-      linuxArmDownloadUrl="https://github.com/0xPolygon/polygon-edge/releases/download/v0.8.1/polygon-edge_0.8.1_linux_arm64.tar.gz"
-      buttonText="Download Polygon Supernets"
-    />
-  </div>
-</div>
--->
+## Spawn a local Supernet in 2 minutes
 
 To access the pre-built releases, visit the [GitHub releases page](https://github.com/0xPolygon/polygon-edge/releases). The client provides cross-compiled AMD64/ARM64 binaries for Darwin and Linux.
-
-<details>
-<summary>[REFERENCE] Extract pre-release package ↓</summary>
-
-Extract the downloaded package using your file system's extraction tool or the provided commands below, and navigate to the pre-built release in your preferred interface or text editor.
-
-<Tabs
-defaultValue="linux-mac"
-values={[
-{ label: 'Linux/Mac', value: 'linux-mac', },
-{ label: 'Windows', value: 'windows', },
-]
-}>
-
-<TabItem value="linux-mac">
-
-```bash
-# replace <downloaded_package> with the actual package filename
-
-tar -xzf <downloaded_package>
-cd <downloaded_package>
-```
-
-</TabItem>
-
-<TabItem value="windows">
-
-The tar command is available in PowerShell on Windows 10 (build 17063 or newer).
-
-```bash
-# replace <downloaded_package> with the actual package filename
-
-tar -xzf <downloaded_package>
-cd <downloaded_package>
-```
-
-For older Windows systems or Command Prompt, use third-party tools like 7-Zip or WinRAR, or the PowerShell cmdlet Expand-Archive.
-
-```bash
-# replace <downloaded_package> with the actual package filename
-# replace <destination_folder> with the desired folder path for extracted files
-
-Expand-Archive -Path <downloaded_package> -DestinationPath <destination_folder>
-cd <destination_folder>
-```
-
-</TabItem>
-</Tabs>
-
-</details>
 
 To run the Supernets test environment locally, run the following command from the project's root:
 

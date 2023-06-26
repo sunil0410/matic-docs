@@ -17,14 +17,6 @@ keywords:
 
 In this guide, you'll discover how to migrate from an existing IBFT consensus chain on the former Edge client to a new PolyBFT consensus-based chain.
 
-:::warning Breaking changes
-Supernets are rapidly evolving towards a production-ready state, and, as a result, instructions and concepts in these guides are subject to change.
-
-Test releases include breaking changes and are not backward compatibility. Use the current test releases for testing and familiarization only.
-
-It is highly recommended that reach out to the Supernets team for support.
-:::
-
 :::caution This is not an upgrade
 
 The regenesis process is not intended as an upgrade to another version of the consensus client but rather as a transformation to a distinct product suite designed for next-generation, application-specific chains (appchains) with cross-chain compatibility and staking requirements. If you are unfamiliar or uncertain about this, please refer to the [<ins>introductory material</ins>](/docs/supernets/get-started/what-are-supernets.md) and [<ins>system design documentation</ins>](/docs/supernets/design/overview.md). For further assistance, please reach out to the Supernets team.

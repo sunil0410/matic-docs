@@ -1,7 +1,7 @@
 ---
 id: overview
 title: Architecture Overview
-sidebar_label: Architecture Overview
+sidebar_label: Overview
 description: "Introduction to the architecture of Supernets."
 keywords:
   - docs

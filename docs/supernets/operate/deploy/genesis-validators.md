@@ -15,7 +15,7 @@ keywords:
 
 In this section, we'll look at how to configure the initial rootchain validator set through allowlisting and by staking.
 
-## i. Allowlist validators on the rootchain
+## 1. Allowlist validators on the rootchain
 
 The `CustomSupernetManager` contract on the rootchain is responsible for managing the PolyBFT network.
 
@@ -50,7 +50,7 @@ The `--addresses` flag is a comma-separated list of the first two validators gen
   --supernet-manager 0x75aA024A2292A3FD3C17d67b54B3d00435437246
 ```
 
-## ii. Register validators on the rootchain
+## 2. Register validators on the rootchain
 
 Each validator needs to register themselves on the `CustomSupernetManager` contract. This is done using the `polygon-edge polybft register-validator` command. **Note that this command is for testing purposes only.**
 
@@ -71,7 +71,7 @@ Each validator needs to register themselves on the `CustomSupernetManager` contr
 --supernet-manager --supernet-manager 0x75aA024A2292A3FD3C17d67b54B3d00435437246
 ```
 
-## iii. Initial staking on the rootchain
+## 3. Initial staking on the rootchain
 
 Each validator needs to perform initial staking on the rootchain `StakeManager` contract. This is done using the `polygon-edge polybft stake` command. **Note that this command is for testing purposes only.**
 
@@ -129,7 +129,7 @@ curl <mumbai-rpc-endpoint> \
 --native-root-token 0x559Dd13d8A3CAb3Ff127c408f2A08A8a2AEfC56c
 ```
 
-## iv. Finalize validator set on the rootchain
+## 4. Finalize validator set on the rootchain
 
 After all validators from the genesis block have performed initial staking on the rootchain, the final step required before starting the chain is to finalize the genesis validator set on the `SupernetManager` contract on the rootchain. This can be done using the `polygon-edge polybft supernet` command.
 
@@ -144,3 +144,9 @@ In the following example command, we use a placeholder hex-encoded private key o
    --stake-manager 0x811068e4106f7A70D443684FF4927eC3940439Ec \
    --finalize-genesis --enable-staking
 ```
+
+## 5. Next Steps
+
+With all the necessary configurations in place for the Supernet, we are ready to proceed with starting the chain.
+
+Navigate to the [Start Your Supernet](/docs/supernets/operate/deploy/start-chain.md) deployment guide, which will provide you with instructions on how to initiate and launch the chain.

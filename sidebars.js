@@ -916,7 +916,7 @@ module.exports = {
         "supernets/design/overview",
         {
           type: "category",
-          label: "PolyBFT Consensus",
+          label: "Consensus",
           link: {
             type: "generated-index",
           },
@@ -927,7 +927,7 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Cross-Chain Bridge",
+          label: "Bridge",
           link: {
             type: "generated-index",
           },
@@ -937,7 +937,7 @@ module.exports = {
             "supernets/design/bridge/checkpoint",
             {
               type: "category",
-              label: "Native assets",
+              label: "Assets",
               link: {
                 type: "generated-index",
               },
@@ -952,7 +952,7 @@ module.exports = {
         "supernets/design/supernets-libp2p",
         {
           type: "category",
-          label: "EVM Runtime",
+          label: "Runtime",
           link: {
             type: "generated-index",
           },
@@ -1177,6 +1177,5 @@ module.exports = {
       ],
     },
     "supernets/supernets-faq",
-    "supernets/supernets-changelog",
   ],
 };

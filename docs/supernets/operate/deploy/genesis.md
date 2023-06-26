@@ -335,7 +335,7 @@ Genesis written to ./genesis.json
                 "mintableNative": false,
                 "nativeTokenConfig": {
                     "name": "Polygon",
-                    "symbol": "MATIC",
+                    "symbol": "WMATIC",
                     "decimals": 18
                 },
                 "initialTrieRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -565,7 +565,7 @@ Genesis written to ./genesis.json
                 "mintableNative": false,
                 "nativeTokenConfig": {
                     "name": "Polygon",
-                    "symbol": "MATIC",
+                    "symbol": "WMATIC",
                     "decimals": 18
                 },
                 "initialTrieRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",

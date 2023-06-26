@@ -37,7 +37,7 @@ This can be done using the `polygon-edge polybft whitelist-validators` command. 
 
 </details>
 
-In the following example command, we are using a placeholder private key for the `CustomSupernetManager` contract deployer. 
+In the following example command, we are using a placeholder private key for the `CustomSupernetManager` contract deployer.
 
 > If running the demo geth instance, the test account private key has been hardcoded: `aa75e9a7d427efc732f8e4f1a5b7646adcc61fd5bae40f80d13c8419c9f43d6d`.
 
@@ -90,7 +90,19 @@ Each validator needs to perform initial staking on the rootchain `StakeManager` 
 
 </details>
 
-In the following example command, we use the validator key and the rootchain `StakeManager` contract address that were generated earlier. We also set the staking amount to `1000000000000000000` which is equivalent to 1 token. The `--native-root-token` flag is used to specify the address of the native token of the root chain. In the case of Polygon, this is the MATIC token. You can obtain the address of the MATIC token by checking the network explorer or by querying the network using a tool like curl or web3.js.
+In the following example command, we use the validator key and the rootchain `StakeManager` contract address that was generated earlier. We also set the staking amount to `1000000000000000000` which is equivalent to 1 token. The `--native-root-token` flag is used to specify the address of the native token of the rootchain.
+
+:::info Staking requirement: wrapping a non-ERC-20 token
+
+Supernets allow for the customization of the gas token and mandate the use of ERC-20 tokens for staking instead of the rootchain's native token.
+
+When performing rootchain staking on the Polygon PoS Mainnet, [<ins>WMATIC</ins>](https://polygonscan.com/token/0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270?a=0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45) (wrapped MATIC) is the required token. This is due to the ERC-20 standard requirement for staking, which MATIC doesn't meet.
+
+WMATIC is deployed at `0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270`.
+
+This principle also applies to the Mumbai Testnet, where wrapped test MATIC must be used instead of test MATIC.
+
+If you currently hold MATIC tokens, you can convert them to WMATIC through various methods. One common method is to use a decentralized exchange (DEX) like Uniswap, where you can swap your MATIC tokens for WMATIC. **Always ensure you're using a reputable platform for this conversion and double-check that the contract address for WMATIC is correct.**
 
 <details>
 <summary>Obtaining native root token address</summary>
@@ -106,9 +118,15 @@ curl <mumbai-rpc-endpoint> \
 
 </details>
 
+:::
+
 ```bash
-./polygon-edge polybft stake --data-dir ./test-chain-1 --chain-id 100 --amount 1000000000000000000 \
---stake-manager 0x6ceCFe1Db48Ab97fA89b06Df6Bd0bBdE6E64e6F7 --native-root-token 0x559Dd13d8A3CAb3Ff127c408f2A08A8a2AEfC56c
+./polygon-edge polybft stake \
+--data-dir ./test-chain-1 \
+--chain-id 100 \
+--amount 1000000000000000000 \
+--stake-manager 0x6ceCFe1Db48Ab97fA89b06Df6Bd0bBdE6E64e6F7 \
+--native-root-token 0x559Dd13d8A3CAb3Ff127c408f2A08A8a2AEfC56c
 ```
 
 ## iv. Finalize validator set on the rootchain

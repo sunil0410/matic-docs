@@ -25,7 +25,7 @@ export const firstRow = [
     },
     {
         title: "Deploy a Supernet",
-        linkUrl: "/docs/supernets/operate/supernets-local-deploy-supernet",
+        linkUrl: "/docs/supernets/operate/deploy",
         imageUrl: "/img/supernets/supernets-logo.png",
         description: "Start building by deploying a childchain and connecting it to the testnet."
     },

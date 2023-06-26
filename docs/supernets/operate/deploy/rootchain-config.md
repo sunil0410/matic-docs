@@ -253,7 +253,7 @@ If you already have an ERC-20 token deployed on the rootchain that you want to u
 
 Replace `<ERC20_TOKEN_ADDRESS>` with the address of your existing ERC-20 token on the rootchain.
 
-To deposit a desired amount and mint it on the childchain, please refer to the guidelines outlined in the despoit guide [<ins>here</ins>](/docs/supernets/operate/deploy/transfers/deposit.md).
+To deposit a desired amount and mint it on the childchain, please refer to the guidelines outlined in the deposit guide [<ins>here</ins>](/docs/supernets/operate/deploy/transfers/deposit.md).
 
 :::
 
@@ -493,7 +493,7 @@ If you already have an ERC-20 token deployed on the rootchain that you want to u
 
 Replace `<ERC20_TOKEN_ADDRESS>` with the address of your existing ERC-20 token on the rootchain.
 
-To deposit a desired amount and mint it on the childchain, please refer to the guidelines outlined in the despoit guide [<ins>here</ins>](/docs/supernets/operate/deploy/transfers/deposit.md).
+To deposit a desired amount and mint it on the childchain, please refer to the guidelines outlined in the deposit guide [<ins>here</ins>](/docs/supernets/operate/deploy/transfers/deposit.md).
 
 :::
 

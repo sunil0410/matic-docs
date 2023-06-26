@@ -21,7 +21,7 @@ Please view the third-party content disclaimer [<ins>here</ins>](https://github.
 
 This page demonstrates the process of configuring/adding custom tokens to Metamask.
 
-You can use the same process to add any custom tokens to any network on Metamask. You can refer to [this table](#tokens-and-contract-adresses) to visualize some examples of test tokens with their respective contract addresses.
+You can use the same process to add any custom tokens to any network on Metamask. You can refer to [this table](#tokens-and-contract-addresses) to visualize some examples of test tokens with their respective contract addresses.
 
 ## Adding a custom token to your MetaMask account
 
@@ -53,7 +53,7 @@ The other fields will auto-populate. Click on Add Custom Tokens and then click o
 
 While the Polygon network supports ERC1155, [Metamask does not yet support the standard](https://metamask.zendesk.com/hc/en-us/articles/360058488651-Does-MetaMask-support-ERC-1155-). This update is expected in the fourth quarter of 2021.
 
-### Tokens and Contract Adresses
+### Tokens and Contract Addresses
 
 | Token         | Network | Contract Address                             |
 |---------------|---------|----------------------------------------------|

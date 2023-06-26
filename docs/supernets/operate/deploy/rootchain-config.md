@@ -647,13 +647,10 @@ To fund the validators' accounts on the rootchain, we use the `polygon-edge root
 
 In a production environment, you would need to ensure that the validators have sufficient funds on the rootchain network to cover the gas fees associated with their transactions.
 
-Here's an example of how to fund each of the validator accounts:
+Here's an example of how to fund a validator account (replace address value with your own):
 
   ```bash
-  ./polygon-edge rootchain fund --data-dir ./test-chain-1 --amount 1000000000000000000
-  ./polygon-edge rootchain fund --data-dir ./test-chain-2 --amount 1000000000000000000
-  ./polygon-edge rootchain fund --data-dir ./test-chain-3 --amount 1000000000000000000
-  ./polygon-edge rootchain fund --data-dir ./test-chain-4 --amount 1000000000000000000
+  ./polygon-edge rootchain fund --addresses 0x77C1eedFf656477462ce16084fE5Dc7F8a2507B9 --amounts 1000000000000000000
   ```
 
 <details>
@@ -661,20 +658,9 @@ Here's an example of how to fund each of the validator accounts:
 
   ```bash
   [ROOTCHAIN FUND]
-   Validator (address) = 0x61324166B0202DB1E7502924326262274Fa4358F
-   Transaction (hash)  = 0x0fb6880751d3c2aa34e42680aa51e3848e2d8376960017068be1fe2fc9896786
-
-  [ROOTCHAIN FUND]
-   Validator (address) = 0xFE5E166BA5EA50c04fCa00b07b59966E6C2E9570
-   Transaction (hash)  = 0x8e9890c55e391dc5e86e8edc271076039bb97d6ef9f5222b2e15fad73b7d7b87
-
-   [ROOTCHAIN FUND]
-   Validator (address) = 0x9aBb8441A12d4FD8D505C3fc50cDdc45E0df2b1e
-   Transaction (hash)  = 0x9717b6feed8526d81227e690dc81d85eeb5b95580252b392d15372ec6c276447
-
-   [ROOTCHAIN FUND]
-   Validator (address) = 0xCaB5AAC79Bebe326e0c80d72b5662E73f5D8ea56
-   Transaction (hash)  = 0xe3e35d80b19b61d8481d482bf9765769efb929de53d40a9d451f4efdcdd43bc0
+  Validator (address) = 0x77C1eedFf656477462ce16084fE5Dc7F8a2507B9
+  Transaction (hash)  = 0x294952b29e3e8ba15fefe28934090dc0d249d71d48c6b19ebe534840703030a9
+  Is minted           = false
   ```
 
 </details>

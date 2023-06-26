@@ -15,6 +15,14 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import DownloadButton from '@site/src/data/DownloadButton';
 
+:::caution Upcoming v1.0 release
+
+The first production release, v1.0, is scheduled to be released shortly. The deployment guides have been updated to reflect the latest developments from the `develop` branch of the `polygon-edge` source code.
+
+You are invited to explore and test on the `develop` branch in preparation for the official release.
+
+:::
+
 :::tip
 
 We recommend using the pre-built releases and verifying the provided checksums for security.
@@ -46,9 +54,7 @@ values={[
 
 To access the pre-built releases, visit the [GitHub releases page](https://github.com/0xPolygon/polygon-edge/releases). The client provides cross-compiled AMD64/ARM64 binaries for Darwin and Linux.
 
-:::info Latest release: 1.0.0
-
-**The latest stable test release is [<ins>v1.0.0</ins>](https://github.com/0xPolygon/polygon-edge/releases/tag/v1.0.0).**
+:::info Upcoming release: 1.0.0
 
 :::
 

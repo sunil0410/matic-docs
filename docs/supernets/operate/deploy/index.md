@@ -19,6 +19,14 @@ import TabItem from '@theme/TabItem';
 This serves as an index for the Supernet deployment guides. 
 The guides explain the end-to-end process for setting up and deploying a local Supernet.
 
+:::caution Upcoming v1.0 release
+
+The first production release, v1.0, is scheduled to be released shortly. The deployment guides have been updated to reflect the latest developments from the `develop` branch of the `polygon-edge` source code.
+
+You are invited to explore and test on the `develop` branch in preparation for the official release.
+
+:::
+
 ## Prerequisites
 
 Before diving into any of the tutorials, make sure your environment meets the necessary prerequisites. They can be found **[<ins>here</ins>](/docs/supernets/operate/system.md)**.

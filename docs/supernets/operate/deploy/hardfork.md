@@ -1,7 +1,7 @@
 ---
 id: supernets-how-to-upgrade
 title: How to Upgrade Your Supernet Using a Hardfork
-sidebar_label: How to Upgrade
+sidebar_label: Upgrades
 description: "Learn how to upgrade your Supernet using a hardfork."
 keywords:
   - docs

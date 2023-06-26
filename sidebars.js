@@ -893,18 +893,7 @@ module.exports = {
     },
     "supernets/index",
     "supernets/operate/supernets-quick-start",
-    {
-      type: "category",
-      label: "Introduction",
-      link: {
-        type: "generated-index",
-      },
-      collapsed: true,
-      items: [
-        "supernets/get-started/what-are-supernets",
-        "supernets/get-started/why-supernets",
-      ],
-    },
+    "supernets/get-started/what-are-supernets",
     {
       type: "category",
       label: "System Design",

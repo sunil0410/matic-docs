@@ -17,6 +17,14 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import DownloadButton from '@site/src/data/DownloadButton';
 
+:::caution Upcoming v1.0 release
+
+The first production release, v1.0, is scheduled to be released shortly. The deployment guides have been updated to reflect the latest developments from the `develop` branch of the `polygon-edge` source code.
+
+You are invited to explore and test on the `develop` branch in preparation for the official release.
+
+:::
+
 Before proceeding, ensure that your system meets the necessary [system requirements](/docs/supernets/operate/system.md).
 
 ## Spawn a local Supernet in 2 minutes

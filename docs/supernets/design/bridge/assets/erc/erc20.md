@@ -39,4 +39,17 @@ Both the `deposit` and `withdraw` functions emit events that log the amount and 
 
 ### EIP1559Burn
 
-The `EIP1559Burn` contract is an additional feature that allows users to convert their `NativeERC20` tokens into ERC-20 tokens. This is useful for users who want to move their native tokens to the Polygon PoS network or other networks that support ERC-20 tokens. To use the `EIP1559Burn` contract, users first need to specify the address of the `ChildERC20Predicate` contract on the Supernet and the destination address on the rootchain where the ERC-20 tokens will be sent after burning. Once initialized, users can call the `withdraw` function, which will burn the native tokens and send the equivalent amount of ERC-20 tokens to the specified destination address.
+The dynamic gas fee mechanism implements a base fee per gas to improve transaction fee predictability and efficiency. The base fee adjusts dynamically based on gas target deviations and is burned within the protocol.
+
+- **Burn Contract**: The burn contract parameter specifies the contract address where fees will be sent and utilized. To enable the London hard fork and set the burn contract address, use the `--burn-contract` flag in the genesis command with the following format: `<block>:<address>`.
+
+- **Genesis Base Fee**: The genesis base fee parameter sets the initial base fee (in GWEI) for the genesis block. Include this value in the genesis.json file during the genesis command. By default, the genesis base fee is set to 1 GWEI.
+
+- **Genesis Base FeeEM**: The genesis base fee elasticity multiplier determines the base fee for blocks following the genesis block. It is initially set to 2. If the London hard fork is disabled (i.e., when the burn contract is not set), the base fee remains the same as the genesis base fee.
+
+- **Burn Contract Parameter Revision**: The burn contract address can be adjusted during a node reboot, which is achieved by modifying the `burnContract` parameter in the genesis.json file. It's crucial to comprehend, however, that merely identifying the burn contract address does not implicitly activate the EIP-1559 feature. If the EIP-1559 was not initialized during genesis, a series of procedures are required to activate it subsequently:
+
+- The burn contract should be properly deployed onto the Supernet.
+- The genesis file must detail the burn contracts map, incorporating both the block number and the burn contract address.
+- The base fee and base fee elasticity multiplier are required to be manually defined in the genesis file.
+- Finally, the EIP1559 fork must be activated.

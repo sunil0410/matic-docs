@@ -1048,6 +1048,7 @@ module.exports = {
                   "supernets/operate/deploy/transfers/supernets-cross-chain-withdraw",
                 ],
             },
+            "supernets/operate/deploy/supernets-how-to-upgrade",
             ],
         },
         ],

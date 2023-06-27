@@ -99,10 +99,12 @@ module.exports = {
               label: "Whitepaper",
               href: "https://github.com/maticnetwork/whitepaper/"
             },
+            /* Commenting out until a working link is available
             {
               label: "Lightpaper",
               href: "https://polygon.technology/lightpaper-polygon.pdf"
             },
+            */
             {
               label: "zkEVM",
               href: "https://zkevm.polygon.technology"

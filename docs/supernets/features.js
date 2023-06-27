@@ -1,6 +1,6 @@
 export const firstRow = [
     {
-        title: "What are Supernets",
+        title: "What are Supernets?",
         linkUrl: "/docs/supernets/get-started/what-are-supernets",
         imageUrl: "/img/supernets/supernets-logo.png",
         description: "Explore how Supernets provide infrastructure to reshape the web."

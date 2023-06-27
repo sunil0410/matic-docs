@@ -1,7 +1,7 @@
 ---
 id: polygon-architecture
-title: Introduction to Polygon PoS
-sidebar_label: Introduction
+title: Architecture Overview
+sidebar_label: Overview
 description: Introduction to the architecture of Polygon PoS blockchain.
 keywords:
   - architecture
@@ -68,7 +68,7 @@ An overview of the process:
 * A selected [proposer](/docs/maintain/glossary#proposer) from the validator set is responsible for collecting all signatures for a particular checkpoint and committing the checkpoint on the Ethereum mainnet.
 * The responsibility of creating blocks and proposing checkpoints is variably dependent on a validator’s stake ratio in the overall pool.
 
-More details on Heimdall are available on the [Heimdall architecture](/docs/pos/heimdall/overview) guide.
+More details on Heimdall are available on the [Heimdall architecture](/docs/pos/design/heimdall/overview) guide.
 
 ## Bor
 
@@ -79,10 +79,10 @@ as a `span` in Polygon. Blocks are produced at the **Bor** node, and the VM is E
 Blocks produced on Bor are also validated periodically by Heimdall nodes, and a checkpoint consisting of
 the Merkle tree hash of a set of blocks on Bor is committed to Ethereum periodically.
 
-More details are available on the [Bor architecture](/docs/pos/bor/overview) guide.
+More details are available on the [Bor architecture](/docs/pos/design/bor/overview) guide.
 
 ## Resources
 
-* [Bor Architecture](https://wiki.polygon.technology/docs/pos/bor)
+* [Bor Architecture](https://wiki.polygon.technology/docs/pos/design/bor)
 * [Heimdall Architecture](https://forum.polygon.technology/t/matic-system-overview-heimdall/8323)
 * [Checkpoint Mechanism](https://forum.polygon.technology/t/checkpoint-mechanism-on-heimdall/7160)

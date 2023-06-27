@@ -32,14 +32,14 @@ The transaction is committed to the Polygon staking contracts on the Ethereum ma
 
 See also:
 
-* [Heimdall architecture: Checkpoint](/docs/pos/heimdall/checkpoint)
-* [Checkpoint Mechanism](/docs/maintain/validator/core-components/checkpoint-mechanism)
+* [Heimdall architecture: Checkpoint](/docs/pos/design/heimdall/checkpoint)
+* [Checkpoint Mechanism](/docs/pos/design/validator/core-components/checkpoint-mechanism)
 
 ## Commission
 
 A commission is the percentage of the rewards taken by [validators](#validator) from the [delegators](#delegator) who stake with the validators.
 
-See also [Validator Commission Operations](/docs/maintain/validate/validator-commission-operations).
+See also [Validator Commission Operations](/docs/pos/operate/validator/validator-commission-operations).
 
 ## Delegator
 
@@ -85,7 +85,7 @@ A logically defined set of blocks for which a set of validators is chosen from a
 
 The selection of each span is decided by at least 2/3 of the validators in terms of the staking power.
 
-See also [Bor Consensus: Span](/docs/pos/bor/consensus.md#span).
+See also [Bor Consensus: Span](/docs/pos/design/bor/consensus.md#span).
 
 ## Staking
 
@@ -103,7 +103,7 @@ See also [Key Management](validator/core-components/key-management.md).
 
 ## Validator
 
-Validators [stake their MATIC tokens](/docs/maintain/validate/validator-staking-operations) via staking contracts deployed on the Ethereum mainnet and are running both the [Heimdall](#heimdall) node and the [Bor](#bor) node to commit the network checkpoints to the Ethereum mainnet and to produce blocks on the network.
+Validators [stake their MATIC tokens](/docs/pos/operate/validator/validator-staking-operations) via staking contracts deployed on the Ethereum mainnet and are running both the [Heimdall](#heimdall) node and the [Bor](#bor) node to commit the network checkpoints to the Ethereum mainnet and to produce blocks on the network.
 
 A validator node is only open to its [sentry](#sentry) node and closed to the rest of the network.
 

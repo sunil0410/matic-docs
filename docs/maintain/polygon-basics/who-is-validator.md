@@ -59,14 +59,14 @@ One can opt out of the system at any time and can withdraw tokens once the unbon
 
 ## Economics
 
-See [Rewards](/docs/maintain/validator/rewards).
+See [Rewards](/docs/pos/design/validator/rewards).
 
 ## Setting up a Validator node
 
-See [Validate](/docs/maintain/validate/validator-index).
+See [Validate](/docs/pos/operate/validator/validator-index).
 
 ## See Also
 
-* [Validator Responsibilities](/docs/maintain/validate/validator-responsibilities)
-* [Validate](/docs/maintain/validate/validator-index)
-* [Validator FAQ](/docs/maintain/validate/faq/validator-faq)
+* [Validator Responsibilities](/docs/pos/operate/validator/validator-responsibilities)
+* [Validate](/docs/pos/operate/validator/validator-index)
+* [Validator FAQ](/docs/pos/operate/validator/faq/validator-faq)

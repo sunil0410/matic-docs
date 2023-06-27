@@ -20,101 +20,19 @@ module.exports = {
           {
             to: '/',
             from: ['/en/latest', '/en/'],
-          },
-          {
-            to: '/docs/contribute/orientation',
-            from: '/docs/pos/orientation',
-          },
-          {
-            to: '/docs/contribute/community-maintainers',
-            from: '/docs/pos/community-maintainers',
-          },
-          {
-            to: '/docs/contribute/bug-bountry-program',
-            from: '/docs/pos/bug-bountry-programs',
-          },
-          {
-            to: '/docs/develop/meta-transactions/meta-transactions',
-            from: '/docs/develop/metatransactions/metatransactions-biconomy',
-          },
-          {
-            to: '/docs/develop/meta-transactions/meta-transactions',
-            from: '/docs/develop/metatransactions/metatransactions-gsn',
-          },
-          {
-            to: '/docs/develop/meta-transactions/network-agnostics',
-            from: '/docs/develop/metatransactions/network-agnostics',
-          },
-          {
-            to: '/docs/develop/wallets/getting-started',
-            from: '/docs/develop/cexs-wallets',
-          },
-          {
-            to: '/docs/develop/wallets/getting-started',
-            from: '/docs/develop/fiat-on-ramp',
-          },
-          {
-            to: '/docs/develop/wallets/getting-started',
-            from: '/docs/develop/fiat-ramps'
-          },
-          {
-            to: '/docs/develop/wallets/getting-started',
-            from: '/docs/develop/cexs-wallets/cexs',
-          },
-          {
-            to: '/docs/develop/wallets/polygon-web-wallet/web-wallet-v3-guide',
-            from: '/docs/develop/wallets/polygon-web-wallet/web-wallet-v2-guide',
-          },
-          {
-            to: '/docs/maintain/validate/kb/known-issues',
-            from: '/docs/maintain/validate/faq/known-issues'
-          },
-          {
-            to: '/docs/maintain/validate/kb/how-to',
-            from: '/docs/maintain/validate/faq/how-to'
-          },
-          {
-            to: '/docs/faq/validator-faq',
-            from: '/docs/maintain/validate/faq/validator-faq'
-          },
-          {
-            to: '/docs/maintain/validator/responsibilities',
-            from: '/docs/maintain/validate/validator-responsibilities'
-          },
-          {
-            to: '/docs/operate/technical-requirements',
-            from: '/docs/develop/network-details/technical-requirements'
-          },
-          {
-            to: '/docs/operate/snapshot-instructions-heimdall-bor',
-            from: '/docs/develop/network-details/snapshot-instructions-heimdall-bor'
-          },
-          {
-            to: '/docs/operate/access-node-alchemy',
-            from: '/docs/develop/network-details/access-node-alchemy'
-          },
-          {
-            to: '/docs/operate/full-node-deployment',
-            from: '/docs/develop/network-details/full-node-deployment'
-          },
-          {
-            to: '/docs/operate/full-node-binaries',
-            from: '/docs/develop/network-details/full-node-binaries'
-          },
-          {
-            to: '/docs/operate/full-node-docker',
-            from: '/docs/develop/network-details/full-node-docker'
-          },
-          {
-            to: '/docs/operate/full-node',
-            from: '/docs/develop/network-details/full-node'
-          },
-
+          }
         ],
         createRedirects: function (existingPath) {
-          if (existingPath.startsWith('/docs/validate/')) {
-            return [existingPath.replace('/docs/maintain/')
-            ];
+          if (existingPath.startsWith('/docs/pos/heimdall/')) {
+            return [existingPath.replace('/docs/pos/heimdall/', '/docs/pos/design/heimdall/')];
+          } else if (existingPath.startsWith('/docs/pos/bor')) {
+            return [existingPath.replace('/docs/pos/bor', '/docs/pos/design/bor')];
+          } else if (existingPath.startsWith('/docs/maintain/govern/')) {
+            return [existingPath.replace('/docs/maintain/govern/', '/docs/governance/')];
+          } else if (existingPath.startsWith('/docs/pos/state-sync')) {
+            return [existingPath.replace('/docs/pos/state-sync', '/docs/pos/design/bridge/state-sync')];
+          } else if (existingPath.startsWith('/docs/operate')) {
+            return [existingPath.replace('/docs/operate', '/docs/pos/operate')];
           }
         },
       },
@@ -314,20 +232,20 @@ module.exports = {
           position: "left",
           items: [
             {
-              href: '/docs/pos/polygon-architecture',
-              label: 'PoS',
-              target: '_self',
-              rel: null,
-            },
-            {
-              href: '/docs/supernets',
-              label: 'Supernets',
+              href: '/docs/pos/getting-started',
+              label: 'PoS Mainnet',
               target: '_self',
               rel: null,
             },
             {
               href: 'https://zkevm.polygon.technology',
               label: 'zkEVM',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/supernets',
+              label: 'Supernets',
               target: '_self',
               rel: null,
             },
@@ -343,19 +261,61 @@ module.exports = {
               target: '_self',
               rel: null,
             },
+            {
+              to: 'https://events.polygon.technology/blueprint-web3-games-guide',
+              label: 'Gaming',
+              target: '_blank',
+              rel: null,
+            },
           ],
         },
         {
-          to: '/docs/maintain/govern/governance-pos',
-          label: 'Governance',
-          target: '_blank',
+          to: '/docs/tools',
+          label: 'Apps & Tools',
+          target: '_self',
           rel: null,
         },
         {
-          to: 'https://events.polygon.technology/blueprint-web3-games-guide',
-          label: 'Gaming Guide',
-          target: '_blank',
-          rel: null,
+          label: "Participate",
+          position: "left",
+          items: [
+            {
+              href: '/docs/delegate/delegate',
+              label: 'Delegate MATIC',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/category/run-a-validator-node',
+              label: 'Run a PoS Validator',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/governance',
+              label: 'Governance',
+              target: '_self',
+              rel: null,
+            },
+          ],
+        },
+        {
+          label: "Pre-Specs",
+          position: "left",
+          items: [
+            {
+              href: 'https://zkevm.polygon.technology/docs/introduction',
+              label: 'zkEVM',
+              target: '_blank',
+              rel: null,
+            },
+            {
+              to: '/docs/category/miden-vm',
+              label: 'Miden',
+              target: '_self',
+              rel: null,
+            },
+          ],
         },
         {
           to: 'https://support.polygon.technology/support/solutions',
@@ -368,7 +328,7 @@ module.exports = {
           to: '/docs/contribute/orientation/',
           label: 'Contribute',
           position: "right",
-          target: '_blank',
+          target: '_self',
           rel: null,
         },
         {

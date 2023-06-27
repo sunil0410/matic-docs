@@ -1,6 +1,7 @@
 ---
 id: security-models
-title: Security Models
+title: Proof of Stake Security Model
+sidebar_label: Security Model
 description: "Learn about the PoS security model."
 keywords:
   - docs
@@ -11,26 +12,16 @@ keywords:
 image: https://wiki.polygon.technology/img/polygon-logo.png
 ---
 
-# Security Models
+## Overview
 
-Polygon provides three types of security models for a developer to build their dApps upon:
+The Proof of Stake (PoS) model's security relies on the Heimdall and Bor layers, both constructed upon the Tendermint protocol. A checkpoint only commits to the root chain once a minimum of two-thirds of the validators provide their signatures.
 
-- [Security Models](#security-models)
-  - [Proof of Stake Security](#proof-of-stake-security)
+The PoS mechanism operates through a collection of staking management contracts on Ethereum, supplemented by a group of incentivized validators running Heimdall and Bor nodes. This approach enables:
 
-We have described each of these security models offered by Polygon and the developer workflow for each with an example dApp below.
+Participation as a Validator by staking MATIC tokens on the Ethereum smart contract.
+Earning of staking rewards for validating state transitions on the Polygon network.
+A fast finality layer periodically solidifies the state through checkpoints, enhancing state security. The EVM-compatible chain, with its high throughput and swift block time, optimizes scalability over an extensive degree of decentralization. Heimdall ensures a secure final state commit, passing through a large validator set to maintain high decentralization.
 
-## Proof of Stake Security
+## For Developers
 
-Proof of Stake (PoS) security is provided by the Heimdall & Bor layer which is built on top of Tendermint. A checkpoint is committed to the root chain only when ⅔ of the validators have signed on it.
-
-To enable the PoS mechanism on our platform, we employ a set of staking management contracts on Ethereum, as well as a set of incentivized validators running Heimdall and Bor nodes. This implements the following features:
-
-- The ability for anyone to stake MATIC tokens on the Ethereum smart contract and join the system as a Validator
-- Earn staking rewards for validating state transitions on Polygon
-
-We have a fast finality layer that finalizes the state periodically via checkpoints. The fast finality helps us cement state. The EVM compatible chain has few validators and faster block time with high throughput. It chooses scalability over high degrees of decentralization. Heimdall ensures that the final state commit is bulletproof and passes via a large validator set and hence high decentralization.
-
-**For developers**
-
-As a dApp developer building on PoS security, the procedure is as simple as taking your smart contract and deploying it on the Polygon PoS network. This is possible because of the account based architecture enabling an EVM-compatible blockchain.
+Deploying on the PoS security model is streamlined for dApp developers: simply deploy the smart contract on the Polygon PoS network. This ease of deployment is due to the account-based architecture, which is compatible with the EVM blockchain.

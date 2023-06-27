@@ -1,31 +1,31 @@
 export const firstRow = [
     {
         title: "Build a dApp on PoS",
-        linkUrl: "docs/develop/getting-started",
+        linkUrl: "docs/category/deploy-a-contract",
         imageUrl: "img/logo-round-dark.png",
         description: "Empower the world by building next-gen dApps using Polygon's PoS mainnet."
     },
     {
         title: "Build a dApp on zkEVM",
-        linkUrl: "docs/develop/getting-started",
+        linkUrl: "https://zkevm.polygon.technology/docs/develop",
         imageUrl: "img/logo-round-dark.png",
         description: "Empower the world by building next-gen dApps using ZK tech."
     },
     {
         title: "Build a Supernet",
-        linkUrl: "docs/category/deploying-contracts",
+        linkUrl: "docs/supernets",
         imageUrl: "img/logo-round-dark.png",
         description: "Learn how to build a fully-fleged appchain with Polygon Supernets."
     },
     {
         title: "Run a PoS node",
-        linkUrl: "docs/operate/technical-requirements",
+        linkUrl: "docs/category/operate-a-node",
         imageUrl: "img/logo-round-dark.png",
         description: "Contribute to decentralized computing by running your own PoS node."
     },
     {
         title: "Run a zkEVM node",
-        linkUrl: "https://zkevm.polygon.technology/docs/setup-local-node",
+        linkUrl: "https://zkevm.polygon.technology/docs/category/setup-zknode",
         imageUrl: "img/logo-round-dark.png",
         description: "Contribute to decentralized computing by running your own ZK node."
     },

@@ -38,11 +38,6 @@ export default function Welcome () {
                   Wiki
                 </h1>
                 <h3 className="mt-0">Discover next-generation dApp development while harnessing the security of Ethereum.</h3>
-                <p className="lead">
-                  <b>Miden Wiki</b> is the documentation hub for Polygon Miden, offering resources and guides for building 
-                  advanced dApps with client-side proving. It's the <strong>first decentralized rollup to use STARK-proofs for 
-                  concurrent local transactions</strong>.
-                </p>
               </div>
               <div className="col-lg-4 text-center pt-3 d-none d-lg-block" style={{ marginLeft: "-100px" }}>
                 <div className="tabs_animation-wrapper supernets-video">

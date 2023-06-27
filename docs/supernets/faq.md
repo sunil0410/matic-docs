@@ -17,6 +17,8 @@ keywords:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+This document contains answers to frequently asked questions (FAQs) about Supernets.
+
 If you're new to Supernets and need general information, please navigate to the **Common FAQs tab**. If you're ready to deploy a Supernet or have technical deployment questions, please navigate the rest of the **FAQ tabs**. **If you have any further questions about configuring Supernets, please consult the documentation or reach out to the Supernets team for support.**
 
 <Tabs

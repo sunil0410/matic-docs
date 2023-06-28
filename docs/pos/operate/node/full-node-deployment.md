@@ -79,7 +79,7 @@ Both binaries must be installed and run in the correct order to function properl
 
 ### Heimdall
 
-Install the latest version of Heimdall and related services. Make sure you checkout to the correct [release version](https://github.com/maticnetwork/heimdall/releases). Note that the latest version, [Heimdall v.0.3.3](https://github.com/maticnetwork/heimdall/releases/tag/v0.3.3), contains enhancements such as:
+Install the latest version of Heimdall and related services. Make sure you checkout to the correct [release version](https://github.com/maticnetwork/heimdall/releases). Note that the latest version, [Heimdall v0.3.4](https://github.com/maticnetwork/heimdall/releases/tag/v0.3.4), contains enhancements such as:
 1. Restricting data size in state sync txs to:
     * **30Kb** when represented in **bytes**
     * **60Kb** when represented as **string**
@@ -320,7 +320,7 @@ At this point, we have a host with docker running on it and we have ample mounte
 First let’s make sure we can run Heimdall with docker. Run the following command:
 
 ```bash
-docker run -it 0xpolygon/heimdall:0.3.3 heimdallcli version
+docker run -it 0xpolygon/heimdall:0.3.4 heimdallcli version
 ```
 
 If this is the first time you’ve run Heimdall with docker, it should pull the required image automatically and output the version information.
@@ -332,7 +332,7 @@ If you’d like to check the details of the Heimdall image or find a different t
 At this point, let’s run the Heimdall `init` command to set up our home directory.
 
 ```bash
-docker run -v /mnt/data/heimdall:/heimdall-home:rw --entrypoint /usr/bin/heimdalld -it 0xpolygon/heimdall:0.3.3 init --home=/heimdall-home
+docker run -v /mnt/data/heimdall:/heimdall-home:rw --entrypoint /usr/bin/heimdalld -it 0xpolygon/heimdall:0.3.4 init --home=/heimdall-home
 ```
 
 Let’s break this command down a bit in case anything goes wrong.
@@ -347,7 +347,7 @@ Let’s break this command down a bit in case anything goes wrong.
 
 * The switch `-it` is used to run the command interactively.
 
-* Finally we’re specifying which image we want to run with `0xpolygon/heimdall:0.3.3`.
+* Finally we’re specifying which image we want to run with `0xpolygon/heimdall:0.3.4`.
 
 * After that `init --home=/heimdall-home` are arguments being passed to the heimdalld executable. `init` is the command we want to run and `--home` is used to specify the location of the home directory.
 
@@ -428,7 +428,7 @@ docker network create polygon
 Now we’re going to start Heimdall. Run the following command:
 
 ```bash
-docker run -p 26657:26657 -p 26656:26656 -v /mnt/data/heimdall:/heimdall-home:rw --net polygon --name heimdall --entrypoint /usr/bin/heimdalld -d --restart unless-stopped  0xpolygon/heimdall:0.3.3 start --home=/heimdall-home
+docker run -p 26657:26657 -p 26656:26656 -v /mnt/data/heimdall:/heimdall-home:rw --net polygon --name heimdall --entrypoint /usr/bin/heimdalld -d --restart unless-stopped  0xpolygon/heimdall:0.3.4 start --home=/heimdall-home
 ```
 
 Many of the pieces of this command will look familiar. So let’s talk about what’s new.
@@ -529,7 +529,7 @@ At this point, you should have a node that’s successfully running Heimdall. Yo
 Before we get started with Bor, we need to run the Heimdall rest server. This command will start a REST API that Bor uses to retrieve information from Heimdall. The command to start server is:
 
 ```bash
-docker run -p 1317:1317 -v /mnt/data/heimdall:/heimdall-home:rw --net polygon --name heimdallrest --entrypoint /usr/bin/heimdalld -d --restart unless-stopped 0xpolygon/heimdall:0.3.3 rest-server --home=/heimdall-home --node "tcp://heimdall:26657"
+docker run -p 1317:1317 -v /mnt/data/heimdall:/heimdall-home:rw --net polygon --name heimdallrest --entrypoint /usr/bin/heimdalld -d --restart unless-stopped 0xpolygon/heimdall:0.3.4 rest-server --home=/heimdall-home --node "tcp://heimdall:26657"
 ```
 
 There are two pieces of this command that are different and worth noting. Rather than running the `start` command, we’re running the `rest-server` command. Also, we’re passing `~–node “tcp://heimdall:26657”~` which tells the rest server how to communicate with Heimdall.
@@ -558,7 +558,7 @@ Let’s verify the `sha256 sum` again for this file:
 Now we need to create a default config file for starting Bor.
 
 ```bash
-docker run -it  0xpolygon/bor:0.3.9 dumpconfig | sudo tee /mnt/data/bor/config.toml
+docker run -it  0xpolygon/bor:0.4.0 dumpconfig | sudo tee /mnt/data/bor/config.toml
 ```
 
 This command is going to generate a .toml file with default settings. We’re going to make a few changes to the file, so open it up with your favorite editor and make a few updates. Note: we’re only showing the lines that are changed.
@@ -590,7 +590,7 @@ datadir = "/bor-home"
 
 At this point, we should be ready to start Bor. We’re going to use this command:
 ``` bash
-docker run -p 30303:30303 -p 8545:8545 -v /mnt/data/bor:/bor-home:rw --net polygon --name bor -d --restart unless-stopped  0xpolygon/bor:0.3.9 server --config /bor-home/config.toml
+docker run -p 30303:30303 -p 8545:8545 -v /mnt/data/bor:/bor-home:rw --net polygon --name bor -d --restart unless-stopped  0xpolygon/bor:0.4.0 server --config /bor-home/config.toml
 ```
 
 If everything went well, you should see lots of logs that look like this:
@@ -717,7 +717,7 @@ configure and manage a full node. See the [Minimum Technical Requirements](techn
 
 :::info Heimdall source enhancements
 
-The latest Heimdall version, **[v.0.3.3](https://github.com/maticnetwork/heimdall/releases/tag/v0.3.3)**, contains a few enhancements.
+The latest Heimdall version, **[v0.3.4](https://github.com/maticnetwork/heimdall/releases/tag/v0.3.4)**, contains a few enhancements.
 The delay time between the contract events of different validators **has been increased** to ensure that the mempool doesn't get filled
 quickly in case of a burst of events that could hamper the chain's progress.
 
@@ -745,10 +745,10 @@ Length in byte format - 4
 
   ```bash
   # Mainnet:
-  ansible-playbook playbooks/network.yml --extra-var="bor_version=v0.3.9 heimdall_version=v0.3.3 network=mainnet node_type=sentry" --list-hosts
+  ansible-playbook playbooks/network.yml --extra-var="bor_version=v0.4.0 heimdall_version=v0.3.4 network=mainnet node_type=sentry" --list-hosts
 
   # Testnet:
-  ansible-playbook playbooks/network.yml --extra-var="bor_version=v0.3.9 heimdall_version=v0.3.3 network=mumbai node_type=sentry" --list-hosts
+  ansible-playbook playbooks/network.yml --extra-var="bor_version=v0.4.0 heimdall_version=v0.3.4 network=mumbai node_type=sentry" --list-hosts
   ```
 
   <img src={useBaseUrl("img/network/full-node-mumbai.png")} />
@@ -757,10 +757,10 @@ Length in byte format - 4
 
   ```bash
   # Mainnet:
-  ansible-playbook playbooks/network.yml --extra-var="bor_version=v0.3.9 heimdall_version=v0.3.3 network=mainnet node_type=sentry"
+  ansible-playbook playbooks/network.yml --extra-var="bor_version=v0.4.0 heimdall_version=v0.3.4 network=mainnet node_type=sentry"
 
   # Testnet:
-  ansible-playbook playbooks/network.yml --extra-var="bor_version=v0.3.9 heimdall_version=v0.3.3 network=mumbai node_type=sentry"
+  ansible-playbook playbooks/network.yml --extra-var="bor_version=v0.4.0 heimdall_version=v0.3.4 network=mumbai node_type=sentry"
   ```
 
 - In case you run into any issues, delete and clean the whole setup using:
@@ -869,7 +869,7 @@ You have to follow the exact outlined sequence of actions, otherwise you will ru
     ```shell
     curl -L https://raw.githubusercontent.com/maticnetwork/install/main/heimdall.sh | bash -s -- <version> <network> <node_type>
     # Example:
-    # curl -L https://raw.githubusercontent.com/maticnetwork/install/main/heimdall.sh | bash -s -- v0.3.3 mainnet sentry
+    # curl -L https://raw.githubusercontent.com/maticnetwork/install/main/heimdall.sh | bash -s -- v0.3.4 mainnet sentry
     ```
 
 #### Bor
@@ -887,7 +887,7 @@ You have to follow the exact outlined sequence of actions, otherwise you will ru
     curl -L https://raw.githubusercontent.com/maticnetwork/install/main/bor.sh | bash -s -- <version> <network> <node_type>
 
     # Example:
-    # curl -L https://raw.githubusercontent.com/maticnetwork/install/main/bor.sh | bash -s -- v0.3.9
+    # curl -L https://raw.githubusercontent.com/maticnetwork/install/main/bor.sh | bash -s -- v0.4.0
     
     
     mainnet sentry
@@ -1040,7 +1040,7 @@ Pay attention to default region and zone, choose ones closer to you or your cust
       export POLYGON_BOOTSTRAP_MODE=snapshot
       export POLYGON_RPC_PORT=8747
       export GCP_NETWORK_TAG=polygon
-      export EXTRA_VAR=(bor_branch=v0.3.7 heimdall_branch=v0.3.3  network_version=mainnet-v1 node_type=sentry/sentry heimdall_network=${POLYGON_NETWORK})
+      export EXTRA_VAR=(bor_branch=v0.3.7 heimdall_branch=v0.3.4  network_version=mainnet-v1 node_type=sentry/sentry heimdall_network=${POLYGON_NETWORK})
       gcloud compute firewall-rules create "polygon-p2p" --allow=tcp:26656,tcp:30303,udp:30303 --description="polygon p2p" --target-tags=${GCP_NETWORK_TAG}
       gcloud compute firewall-rules create "polygon-rpc" --allow=tcp:${POLYGON_RPC_PORT} --description="polygon rpc" --target-tags=${GCP_NETWORK_TAG}
       export INSTANCE_NAME=polygon-0

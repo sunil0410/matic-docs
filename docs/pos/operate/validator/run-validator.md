@@ -153,7 +153,7 @@ Install the binaries for both on the sentry and validator machines.
 [Heimdall](/docs/pos/design/heimdall/overview) is the Proof-of-Stake verifier layer
 responsible for checkpointing the representation of blocks to the Ethereum mainnet.
 
-The latest version, [Heimdall v.0.3.3](https://github.com/maticnetwork/heimdall/releases/tag/v0.3.3), contains a few enhancements such as:
+The latest version, [Heimdall v0.3.4](https://github.com/maticnetwork/heimdall/releases/tag/v0.3.4), contains a few enhancements such as:
 1. Restricting data size in state sync txs to:
     * **30Kb** when represented in **bytes**
     * **60Kb** when represented as **string**.
@@ -185,7 +185,7 @@ where `RELEASE_TAG` is the tag of the release version that you install.
 For instance:
 
 ```sh
-git checkout v0.3.3
+git checkout v0.3.4
 ```
 
 Once you are on the correct release, install Heimdall:
@@ -228,7 +228,7 @@ where `RELEASE_TAG` is the tag of the release version that you install.
 For instance:
 
 ```sh
-git checkout v0.3.9
+git checkout v0.4.0
 ```
 
 Install Bor:
@@ -889,7 +889,7 @@ xxx.xxx.xx.xx | SUCCESS => {
 Do a test run of the sentry node setup:
 
 ```sh
-ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_version=v0.3.9 heimdall_version=v0.3.3  network_version=mainnet-v1 node_type=sentry/sentry heimdall_network=mainnet" --list-hosts
+ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_version=v0.4.0 heimdall_version=v0.3.4  network_version=mainnet-v1 node_type=sentry/sentry heimdall_network=mainnet" --list-hosts
 ```
 
 This will be the output:
@@ -904,7 +904,7 @@ playbook: playbooks/network.yml
 Run the sentry node setup with sudo privileges:
 
 ```sh
-ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_version=v0.3.9 heimdall_version=v0.3.3  network_version=mainnet-v1 node_type=sentry/sentry heimdall_network=mainnet" --ask-become-pass
+ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_version=v0.4.0 heimdall_version=v0.3.4  network_version=mainnet-v1 node_type=sentry/sentry heimdall_network=mainnet" --ask-become-pass
 ```
 
 Once the setup is complete, you will see a message of completion on the terminal.
@@ -942,7 +942,7 @@ xxx.xxx.xx.xx | SUCCESS => {
 Do a test run of the validator node setup:
 
 ```sh
-ansible-playbook -l validator playbooks/network.yml --extra-var="bor_version=v0.3.9 heimdall_version=v0.3.3 network_version=mainnet-v1 node_type=sentry/validator heimdall_network=mainnet" --list-hosts
+ansible-playbook -l validator playbooks/network.yml --extra-var="bor_version=v0.4.0 heimdall_version=v0.3.4 network_version=mainnet-v1 node_type=sentry/validator heimdall_network=mainnet" --list-hosts
 ```
 
 You should get this as output:
@@ -957,7 +957,7 @@ playbook: playbooks/network.yml
 Run the validator node setup with sudo privileges:
 
 ```sh
-ansible-playbook -l validator playbooks/network.yml --extra-var="bor_version=v0.3.9 heimdall_version=v0.3.3  network_version=mainnet-v1 node_type=sentry/validator heimdall_network=mainnet" --ask-become-pass
+ansible-playbook -l validator playbooks/network.yml --extra-var="bor_version=v0.4.0 heimdall_version=v0.3.4  network_version=mainnet-v1 node_type=sentry/validator heimdall_network=mainnet" --ask-become-pass
 ```
 
 Once the setup is complete, you will see a message of completion on the terminal.
@@ -1065,7 +1065,7 @@ For snapshot download links, see [Polygon Chains Snapshots](https://snapshot.pol
 
 ### Start the Heimdall service
 
-The latest version, [Heimdall v.0.3.3](https://github.com/maticnetwork/heimdall/releases/tag/v0.3.3), contains a few enhancements such as:
+The latest version, [Heimdall v0.3.4](https://github.com/maticnetwork/heimdall/releases/tag/v0.3.4), contains a few enhancements such as:
 1. Restricting data size in state sync txs to:
     * **30Kb** when represented in **bytes**
     * **60Kb** when represented as **string**.
@@ -1474,7 +1474,7 @@ It is important to keep in mind that a sentry node must always be set up before 
     ```shell
     curl -L https://raw.githubusercontent.com/maticnetwork/install/main/heimdall.sh | bash -s -- <version> <network> <node_type>
     # Example:
-    # curl -L https://raw.githubusercontent.com/maticnetwork/install/main/heimdall.sh | bash -s -- v0.3.3 mainnet sentry
+    # curl -L https://raw.githubusercontent.com/maticnetwork/install/main/heimdall.sh | bash -s -- v0.3.4 mainnet sentry
     ```
 
 ### Bor
@@ -1492,7 +1492,7 @@ It is important to keep in mind that a sentry node must always be set up before 
     curl -L https://raw.githubusercontent.com/maticnetwork/install/main/bor.sh | bash -s -- <version> <network> <node_type>
 
     # Example:
-    # curl -L https://raw.githubusercontent.com/maticnetwork/install/main/bor.sh | bash -s -- v0.3.9 mainnet sentry
+    # curl -L https://raw.githubusercontent.com/maticnetwork/install/main/bor.sh | bash -s -- v0.4.0 mainnet sentry
     ```
 
 ### Check installation

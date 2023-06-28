@@ -20,7 +20,222 @@ module.exports = {
           {
             to: '/',
             from: ['/en/latest', '/en/'],
-          }
+          },
+          // heimdall
+          {
+            to: '/docs/pos/design/heimdall/antehandler',
+            from: '/docs/pos/heimdall/antehandler',
+          },
+          {
+            to: '/docs/pos/design/heimdall/checkpoint',
+            from: '/docs/pos/heimdall/checkpoint',
+          },
+          {
+            to: '/docs/pos/design/heimdall/encoder',
+            from: '/docs/pos/heimdall/encoder',
+          },
+          {
+            to: '/docs/pos/design/heimdall/overview',
+            from: '/docs/pos/heimdall/overview',
+          },
+          {
+            to: '/docs/pos/design/heimdall/peppermint',
+            from: '/docs/pos/heimdall/peppermint',
+          },
+          {
+            to: '/docs/pos/design/heimdall/stdtx',
+            from: '/docs/pos/heimdall/stdtx',
+          },
+          {
+            to: '/docs/pos/design/heimdall/transactions',
+            from: '/docs/pos/heimdall/transactions',
+          },
+          {
+            to: '/docs/pos/design/heimdall/types',
+            from: '/docs/pos/heimdall/types',
+          },
+          {
+            to: '/docs/pos/design/heimdall/validator-key-management',
+            from: '/docs/pos/heimdall/validator-key-management',
+          },
+          {
+            to: '/docs/pos/design/heimdall/validators',
+            from: '/docs/pos/heimdall/validators',
+          },
+          // bor
+          {
+            to: '/docs/pos/design/bor/bor',
+            from: '/docs/pos/bor/bor',
+          },
+          {
+            to: '/docs/pos/design/bor/consensus',
+            from: '/docs/pos/bor/consensus',
+          },
+          {
+            to: '/docs/pos/design/bor/core_concepts',
+            from: '/docs/pos/bor/core_concepts',
+          },
+          {
+            to: '/docs/pos/design/bor/overview',
+            from: '/docs/pos/bor/overview',
+          },
+          // state-sync
+          {
+            to: '/docs/pos/design/docs/pos/state-sync/how-state-sync-works',
+            from: '/docs/pos/state-sync/how-state-sync-works',
+          },
+          {
+            to: '/docs/pos/design/docs/pos/state-sync/state-sync',
+            from: '/docs/pos/state-sync/state-sync',
+          },
+          // l1-l2-communication
+          {
+            to: '/docs/pos/design/l1-l2-communication/ethereum-to-matic',
+            from: '/docs/pos/l1-l2-communication/ethereum-to-matic',
+          },
+          {
+            to: '/docs/pos/design/l1-l2-communication/fx-portal',
+            from: '/docs/pos/l1-l2-communication/fx-portal',
+          },
+          {
+            to: '/docs/pos/design/l1-l2-communication/matic-to-ethereum',
+            from: '/docs/pos/l1-l2-communication/matic-to-ethereum',
+          },
+          {
+            to: '/docs/pos/design/l1-l2-communication/state-transfer',
+            from: '/docs/pos/l1-l2-communication/state-transfer',
+          },
+          {
+            to: '/docs/pos/design/l1-l2-communication/fx-portal/fx-example',
+            from: '/docs/pos/l1-l2-communication/fx-portal/fx-example',
+          },
+          // ethereum-polygon
+          {
+            to: '/docs/pos/design/ethereum-polygon/getting-started',
+            from: '/docs/pos/ethereum-polygon/getting-started',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/mintable-assets',
+            from: '/docs/pos/ethereum-polygon/mintable-assets',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/submit-mapping-request',
+            from: '/docs/pos/ethereum-polygon/submit-mapping-request',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/deposit-withdraw-event-pos',
+            from: '/docs/pos/ethereum-polygon/pos/deposit-withdraw-event-pos',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/deployment',
+            from: '/docs/pos/ethereum-polygon/pos/deployment',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/getting-started',
+            from: '/docs/pos/ethereum-polygon/pos/getting-started',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/mapping-assets',
+            from: '/docs/pos/ethereum-polygon/pos/mapping-assets',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/calling-contracts/erc20',
+            from: '/docs/pos/ethereum-polygon/pos/calling-contracts/erc20',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/calling-contracts/erc721',
+            from: '/docs/pos/ethereum-polygon/pos/calling-contracts/erc721',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/calling-contracts/erc1155',
+            from: '/docs/pos/ethereum-polygon/pos/calling-contracts/erc1155',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/calling-contracts/ether',
+            from: '/docs/pos/ethereum-polygon/pos/calling-contracts/ether',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/using-sdk/erc20',
+            from: '/docs/pos/ethereum-polygon/pos/using-sdk/erc20',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/using-sdk/erc721',
+            from: '/docs/pos/ethereum-polygon/pos/using-sdk/erc721',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/using-sdk/erc1155',
+            from: '/docs/pos/ethereum-polygon/pos/using-sdk/erc1155',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/using-sdk/eth',
+            from: '/docs/pos/ethereum-polygon/pos/using-sdk/eth',
+          },
+          {
+            to: '/docs/pos/design/ethereum-polygon/pos/tools/widget',
+            from: '/docs/pos/ethereum-polygon/pos/tools/widget',
+          },
+          //pos node operate
+          {
+            to: '/docs/pos/operate/full-node-deployment',
+            from: '/docs/operate/full-node-binaries',
+          },
+          {
+            to: '/docs/pos/operate/full-node-deployment',
+            from: '/docs/operate/full-node-docker',
+          },
+          {
+            to: '/docs/pos/operate/full-node-deployment',
+            from: '/docs/operate/full-node-gcp',
+          },
+          {
+            to: '/docs/pos/operate/full-node-deployment',
+            from: '/docs/operate/full-node',
+          },
+          {
+            to: '/docs/pos/operate/full-node-deployment',
+            from: '/docs/operate/full-node-deployment',
+          },
+          {
+            to: '/docs/pos/operate/setup-archive-node',
+            from: '/docs/operate/erigon-client',
+          },
+          {
+            to: '/docs/pos/operate/setup-archive-node',
+            from: '/docs/operate/archive-node',
+          },
+          {
+            to: '/docs/pos/operate/setup-archive-node',
+            from: '/docs/operate/setup-archive-node',
+          },
+          //pos operate
+          {
+            to: '/docs/pos/design/gas-token',
+            from: '/docs/operate/gas-token',
+          },
+          {
+            to: '/docs/pos/reference/contracts/genesis-contracts',
+            from: '/docs/operate/genesis-contracts',
+          },
+          {
+            to: '/docs/pos/reference/mapped-tokens',
+            from: '/docs/operate/mapped-tokens',
+          },
+          {
+            to: '/docs/pos/reference/rpc-endpoints',
+            from: '/docs/operate/network-rpc-endpoints',
+          },
+          {
+            to: '/docs/pos/reference/default-ports',
+            from: '/docs/operate/default-ports',
+          },
+          {
+            to: '/docs/pos/reference/snapshot-instructions-heimdall-bor',
+            from: '/docs/operate/snapshot-instructions-heimdall-bor',
+          },
+          {
+            to: '/docs/pos/operate/validator/validator-node-system-requirements',
+            from: '/docs/operate/technical-requirements',
+          },
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith('/docs/pos/heimdall/')) {

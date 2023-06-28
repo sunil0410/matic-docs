@@ -1,7 +1,7 @@
 ---
 id: contributor-guidelines
 title: How to Contribute
-sidebar_label: Contributor guidelines
+sidebar_label: How to Contribute
 description: Prepare for your upcoming contribution
 keywords:
   - docs
@@ -14,8 +14,10 @@ image: https://wiki.polygon.technology/img/polygon-logo.png
 slug: orientation
 ---
 
-:::tip
-Feel free to [raise an issue on our Polygon Wiki repository](https://github.com/maticnetwork/matic-docs/issues)
+:::tip Open a pull request
+
+Feel free to [<ins>raise an issue on the Polygon Wiki repository</ins>](https://github.com/maticnetwork/matic-docs/issues).
+
 :::
 
 ## Identify an area to Contribute to
@@ -38,7 +40,6 @@ There are several ways to identify an area where you can contribute to the Wiki:
     against the `master` branch (kindly check the sample PR).
   - The documentation team will review the PR or reach out accordingly.
   - Repository: https://github.com/maticnetwork/matic-docs
-  - Sample PR: https://github.com/maticnetwork/matic-docs/pull/360
 
 :::tip
 If you want to run our Wiki locally on your machine, check the section [running the Wiki locally](https://github.com/maticnetwork/matic-docs#run-the-wiki-locally). If you are adding a new document, it is recommended to just have a basic summary/introduction and a link to your Github or documentation for more details.

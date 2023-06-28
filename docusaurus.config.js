@@ -272,10 +272,22 @@ module.exports = {
           ],
         },
         {
-          to: '/docs/tools',
-          label: 'Apps & Tools',
-          target: '_self',
-          rel: null,
+          label: "Apps & Tools",
+          position: "left",
+          items: [
+            {
+              href: '/docs/tools',
+              label: 'General',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/tools/matic-js/get-started',
+              label: 'Matic.js',
+              target: '_self',
+              rel: null,
+            },
+          ],
         },
         {
           label: "Participate",

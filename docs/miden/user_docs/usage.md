@@ -1,7 +1,7 @@
 ---
 id: usage
-title: Using Miden VM
-sidebar_label: Using Miden VM
+title: How to Use the Miden Virtual Machine
+sidebar_label: Use the Miden VM
 description: Basic instructions on how to use Miden VM.
 keywords:
   - docs

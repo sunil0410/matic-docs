@@ -13,7 +13,7 @@ export const firstRow = [
     },
     {
         title: "Build a Supernet",
-        linkUrl: "docs/supernets",
+        linkUrl: "/docs/category/build-a-supernet",
         imageUrl: "img/logo-round-dark.png",
         description: "Learn how to build a fully-fleged appchain with Polygon Supernets."
     },

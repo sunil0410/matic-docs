@@ -1,7 +1,7 @@
 ---
 id: translate
-title: Help with translations
-sidebar_label: Help with translations
+title: Help With Translations
+sidebar_label: Help With Translations
 description: Learn how to help translate the Polygon Wiki.
 keywords:
   - docs

@@ -8,7 +8,7 @@ description: 'Exit the withdraw process faster using txHash from withdrawStart.'
 
 `withdrawExitFaster` method can be used to exit the withdraw process faster by using the txHash from `withdrawStart` method.
 
-It is generally fast because it generates proof in the backend. You need to configure [setProofAPI](/docs/pos/design/bridge/ethereum-polygon/matic-js/set-proof-api).
+It is generally fast because it generates proof in the backend. You need to configure [setProofAPI](/docs/tools/matic-js/set-proof-api).
 
 **Note**- withdrawStart transaction must be checkpointed in order to exit the withdraw.
 

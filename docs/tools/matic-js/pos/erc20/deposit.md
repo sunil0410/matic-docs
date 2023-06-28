@@ -24,4 +24,4 @@ const txReceipt = await result.getReceipt();
 
 ```
 
-It might take some time to reflect the deposited amount on polygon chain. You can use [isDeposited](/docs/pos/design/bridge/ethereum-polygon/matic-js/pos/is-deposited) method for checking status.
+It might take some time to reflect the deposited amount on polygon chain. You can use [isDeposited](/docs/tools/matic-js/pos/is-deposited) method for checking status.

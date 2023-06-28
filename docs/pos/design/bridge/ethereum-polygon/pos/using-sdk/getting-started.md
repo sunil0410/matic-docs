@@ -16,7 +16,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-To get started, check the latest [Matic.js documentation](/docs/pos/design/bridge/ethereum-polygon/matic-js/get-started).
+To get started, check the latest [Matic.js documentation](/docs/tools/matic-js/get-started).
 
 ## Quick Summary
 

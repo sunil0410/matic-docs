@@ -1,7 +1,7 @@
 ---
 id: wiki-maintainers
 title: Wiki Maintainers
-sidebar_label: Maintainers
+sidebar_label: Wiki Maintainers
 description: A list of Polygon Wiki maintainers
 keywords:
   - docs

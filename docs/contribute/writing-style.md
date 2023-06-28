@@ -1,7 +1,7 @@
 ---
 id: writing-style
 title: General Writing Guidelines
-sidebar_label: General writing guidelines
+sidebar_label: Writing Guidelines
 description: Follow the following guidelines when writing.
 keywords:
   - docs

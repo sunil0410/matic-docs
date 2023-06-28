@@ -10,7 +10,7 @@ export const firstRow = [
         imageUrl: "/img/miden-logo.png",
     },
     {
-        title: "dApp Tools",
+        title: "Builder Tools",
         linkUrl: "/docs/category/ethereum-tools",
         imageUrl: "/img/miden-logo.png",
     },

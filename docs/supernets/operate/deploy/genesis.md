@@ -162,8 +162,7 @@ For example, the following command enables EIP1559 by specifying the burn contra
 ./polygon-edge genesis --block-gas-limit 10000000 --epoch-size 10 \
     --validators-path ./ --validators-prefix test-chain- \
     --consensus polybft \
-    --burn-contract 100:0x1234567890ABCDEF1234567890ABCDEF12345678 \
-    --genesis-base-fee 2
+    --burn-contract 100:0x1234567890ABCDEF1234567890ABCDEF12345678
 ```
 
 </details>
